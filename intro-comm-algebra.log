@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.21)  5 JAN 2021 10:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.21)  8 JAN 2021 18:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -129,20 +129,20 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 ) (./intro-comm-algebra.aux)
 \openout1 = `intro-comm-algebra.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -152,14 +152,14 @@ LaTeX Font Info:    ... okay on input line 11.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(190.34894pt, 216.81pt, 190.34894pt)
+* h-part:(L,W,R)=(154.21394pt, 289.07999pt, 154.21394pt)
 * v-part:(T,H,B)=(106.75473pt, 578.15999pt, 160.13213pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=216.81pt
+* \textwidth=289.07999pt
 * \textheight=578.15999pt
-* \oddsidemargin=118.07895pt
-* \evensidemargin=118.07895pt
+* \oddsidemargin=81.94395pt
+* \evensidemargin=81.94395pt
 * \topmargin=-2.51526pt
 * \headheight=12.0pt
 * \headsep=25.0pt
@@ -178,11 +178,11 @@ LaTeX Font Info:    ... okay on input line 11.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -197,166 +197,118 @@ Chapter 2.
 
 ]
 Chapter 3.
-LaTeX Font Info:    Trying to load font information for U+euf on input line 42.
-(/usr/local/texlive/2020basic/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-./intro-comm-algebra.tex:42: Argument of \math@egroup has an extra }.
-<inserted text> 
-                \par 
-l.42 ...thfrak{a}\), and the ideals $\bar\mathfrak
-                                                  {b}$ of $A/\mathfrak{a}$, ...
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
 Runaway argument?
-./intro-comm-algebra.tex:42: Paragraph ended before \math@egroup was complete.
+./intro-comm-algebra.tex:65: Paragraph ended before \end  was complete.
 <to be read again> 
                    \par 
-l.42 ...thfrak{a}\), and the ideals $\bar\mathfrak
-                                                  {b}$ of $A/\mathfrak{a}$, ...
+l.65 
+     
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./intro-comm-algebra.tex:42: Missing $ inserted.
-<inserted text> 
-                $
-l.42 ...thfrak{a}\), and the ideals $\bar\mathfrak
-                                                  {b}$ of $A/\mathfrak{a}$, ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./intro-comm-algebra.tex:42: Missing } inserted.
-<inserted text> 
-                }
-l.42 ...thfrak{a}\), and the ideals $\bar\mathfrak
-                                                  {b}$ of $A/\mathfrak{a}$, ...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./intro-comm-algebra.tex:42: Missing } inserted.
-<inserted text> 
-                }
-l.42 ...thfrak{a}\), and the ideals $\bar\mathfrak
-                                                  {b}$ of $A/\mathfrak{a}$, ...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./intro-comm-algebra.tex:42: Missing } inserted.
-<inserted text> 
-                }
-l.42 ...thfrak{a}\), and the ideals $\bar\mathfrak
-                                                  {b}$ of $A/\mathfrak{a}$, ...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (26.02731pt too wide) in paragraph at lines 42--42
-\OT1/cmr/bx/n/10 Theorem 3.1.1. \OT1/cmr/m/it/10 There is a one-to-one order-preserving
- []
-
-./intro-comm-algebra.tex:42: Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.42 ...thfrak{a}\), and the ideals $\bar\mathfrak
-                                                  {b}$ of $A/\mathfrak{a}$, ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./intro-comm-algebra.tex:42: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.42 ...thfrak{a}\), and the ideals $\bar\mathfrak
-                                                  {b}$ of $A/\mathfrak{a}$, ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-./intro-comm-algebra.tex:42: LaTeX Error: \mathfrak allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 ... ideals $\bar\mathfrak{b}$ of $A/\mathfrak
-                                                  {a}$, given by $\mathfrak{...
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./intro-comm-algebra.tex:42: LaTeX Error: \mathfrak allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 ...$ of $A/\mathfrak{a}$, given by $\mathfrak
-                                                  {b} = \phi^{-1}(\mathfrak{...
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-./intro-comm-algebra.tex:42: Missing $ inserted.
-<inserted text> 
-                $
-l.42 ...athfrak{a}$, given by $\mathfrak{b} = \phi
-                                                  ^{-1}(\mathfrak{b})$.
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[3
-
-] [4]
-Chapter 4.
-[5
+LaTeX Font Info:    Trying to load font information for U+euf on input line 71.
+(/usr/local/texlive/2020basic/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [3
 
 ]
+./intro-comm-algebra.tex:93: Missing $ inserted.
+<inserted text> 
+                $
+l.93 ...0. A *field* is a ring $A$ in which $1\neq
+                                                   0$ and every non-zero ele...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (21.01047pt too wide) in paragraph at lines 93--94
+\OT1/cmr/m/it/10 (1)$\OML/cmm/m/it/10 :Thezeroideal$\OT1/cmr/m/it/10 (0)$\OML/cmm/m/it/10 isusuallydenotedby\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :A \OMS/cmsy/m/n/10 ^^C \OML/cmm/m/it/10 field \OMS/cmsy/m/n/10 ^^C \OML/cmm/m/it/10 isaring$\OT1/cmr/m/it/10 A$\OML/cmm/m/it/10 inwhich$\OT1/cmr/m/it/10 1$\OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 =
+ []
+
+./intro-comm-algebra.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 ...{p} \implies x \in \mathfrak{p} or $y \in
+                                                   \mathfrak{p}$.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[4] [5]
+Overfull \hbox (10.8817pt too wide) in paragraph at lines 198--199
+\OT1/cmr/bx/n/10 Proposition 3.6.5. $\OML/cmm/m/it/10 D \OT1/cmr/m/n/10 =$ \OT1/cmr/m/it/10 set of zero-divisors of $\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 r\OT1/cmr/m/n/10 ([](\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ))$\OT1/cmr/m/it/10 . 
+ []
+
+
+Overfull \hbox (3.66571pt too wide) in paragraph at lines 202--203
+\OT1/cmr/bx/n/10 Proposition 3.6.6. \OT1/cmr/m/it/10 Let $[]$ be ide-als in a ring A such that $\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 (\U/euf/m/n/10 a\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; r\OT1/cmr/m/n/10 (\U/euf/m/n/10 b\OT1/cmr/m/n/10 )$
+ []
+
+[6]
+Chapter 4.
+
+Overfull \hbox (14.19806pt too wide) in paragraph at lines 208--208
+[]\OT1/cmr/bx/n/14.4 Modules and Mod-ule ho-mo-mor-phisms 
+ []
+
+[7
+
+] [8]
+Overfull \hbox (4.121pt too wide) in paragraph at lines 308--309
+\OT1/cmr/bx/n/10 Proposition 4.4.7. \OT1/cmr/m/it/10 Let $\OML/cmm/m/it/10 x[]$ \OT1/cmr/m/it/10 be el-e-ment of $\OML/cmm/m/it/10 M$ \OT1/cmr/m/it/10 whose im-age in $\OML/cmm/m/it/10 M=mM$
+ []
+
+
+Overfull \hbox (5.71309pt too wide) in paragraph at lines 314--315
+\OT1/cmr/bx/n/10 Definition 4.5.1. \OT1/cmr/m/it/10 A se-quence of A-modules and A-homomorphisms, 
+ []
+
+[9] [10]
 Chapter 5.
-[6
+[11
 
 ]
 Chapter 6.
-[7
+[12
 
 ]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 91.
+LaTeX Warning: Empty `thebibliography' environment on input line 351.
 
-[8
 
-] (./intro-comm-algebra.aux) ) 
+./intro-comm-algebra.tex:353: LaTeX Error: \begin{end} on input line 64 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.353 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[13
+
+] (./intro-comm-algebra.aux) )
+(\end occurred inside a group at level 2)
+
+### semi simple group (level 2) entered at line 64 (\begingroup)
+### semi simple group (level 1) entered at line 58 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 2184 strings out of 482056
- 28764 string characters out of 5937674
- 267007 words of memory out of 5000000
- 17874 multiletter control sequences out of 15000+600000
- 542467 words of font info for 63 fonts, out of 8000000 for 9000
+ 2201 strings out of 482056
+ 28917 string characters out of 5937674
+ 270142 words of memory out of 5000000
+ 17889 multiletter control sequences out of 15000+600000
+ 543524 words of font info for 66 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 30i,6n,33p,893b,191s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on intro-comm-algebra.pdf (10 pages, 139319 bytes).
+ 30i,8n,33p,893b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb>
+Output written on intro-comm-algebra.pdf (15 pages, 204787 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 121 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

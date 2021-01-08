@@ -1,12 +1,16 @@
 \documentclass[]{report}
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
-\usepackage[a4paper, total={3in, 8in}]{geometry}
+\usepackage[a4paper, total={4in, 8in}]{geometry}
 
 
 % user defined commands go here
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{prop}[theorem]{Proposition}
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{examples}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
 
 \begin{document}
 
@@ -38,49 +42,305 @@
 % The statement of the theorems and proofs go here. Focus most effort here.
 \chapter{Rings and Ideals}
 \section{Basic Definitions}
+\begin{defn} 
+    A ring A is a set with two binary operations (addition and multiplication) such that
+\begin{enumerate}
+    \item A is an abelian group with respect to addition
+    \item Multipicatio is associative $((xy)z = x(yz))$ and distributive over addition $(x(y+z) = xy+xz, (y+z)x = yx + zx)$.  
+    \item $xy=yx$ for all $x,y\in A$. (for our purpose we consider only rings that commute)
+    \item $\exists 1\in A$ such that $x1 = 1x = x$ for all $x\in A$. 
+The identity element is unique. 
+\end{enumerate}
+
+If $1=0$ then for any $x\in A$ we have $x=x1=x0 =0$ so $A$ has only one element $0$.
+\end{defn}
+
+\begin{defn} A ring homomorphism is a mapping $f$ of a ring $A$ into a ring $B$ such that
+    \begin{enumerate}
+        \item $f(x+y) = f(x) + f(y)$ so that $f$ is a homomorphism of abelian groups.
+        \item $f(xy) = f(x)f(y)$,
+        \item $f(1) = 1$
+    \end{enumerate}
+\begin{end}
+
+\begin{defn} A subset S of a ring A is a subring of A if S is closed under addition and multiplication and contains th identity element of A. 
+\end{defn}
+
+\section{Ideals and Quotients}
+\begin{defn}
+    An ideal $\mathfrak{a}$ of a ring A is a subset of A which is an additive subgroup and is such that $A\mathfrak{a\subseteq a}$.
+\end{defn}
+
+\begin{defn}
+    The quotient group $A/\mathfrak{a}$ inherits a uniquely defined multiplication from $A$ which makes it into a ring. Called the quotient ring $A/\mathfrak{a}$. The elements of $A/\mathfrak{a}$ are the cosets of $\mathfrak{a}$ in A, and the mapping $\phi: A\rightarrow A/\mathfrak{a}$ which maps each $x\in A$ to its coset $x+\mathfrak{a}$ is a surjective ring homomorphism.
+\end{defn}
+
+\begin{prop}
+    There is a one-to-one order-preserving correspondence between the ideals $\mathfrak{b}$ of A which contain $\mathfrak{a}$ and the ideals $\bar{\mathfrak{b}}$  of $A/\mathfrak{a}$, given by $\mathfrak{b} = \phi^{-1}(\bar{\mathfrak{b}})$.
+\end{prop}
+
+\section{Zero-Divisors, Nilpotent Elements, Units}
+
+\begin{defn}
+    A zero-divisor in a ring A is an element $x$ for which there exists $y\neq 0$ in A such that $xy=0$. A ring with no zero-divisors $\neq 0$ is called an *integral domain*.
+\end{defn}
+
+\begin{defn}
+    An element $x\in A$ is nilpotent if $x^n=0$ for some $n>0$. A nilpotent element is a zero-divisor. A *unit* in A is an element $x$ such that $xy=1$ for some $y\in A$. The element $y$ is then uniquely determined by $x$ and is written $x^{-1}$. The units in A form a multiplicative abelian group.
+\end{defn}
+
+\begin{defn}
+    The multiples $ax$ of an element $x\in A$ form a principal ideal, denoted by $(x)$ or $Ax$. $x$ is a unit $\Leftrightarrow$ (x) = A = (1)$. The zero ideal $(0)$ is usually denoted by 0. A *field* is a ring $A$ in which $1\neq 0$ and every non-zero element is a unit. Every field is an integral domain. 
+\end{defn}
+
+\begin{prop}
+    Let A be a ring $\neq 0$. Then the following are equivalent:
+    \begin{enumerate}
+        \item A is a field
+        \item the only ideals in A are $0$ and $(1)$.
+        \item every homomorphism of $A$ into a non-zero ring $B$ is injective.
+    \end{enumerate}
+\end{prop}
+
+\section{Prime and Maximal Ideals}
+
+\begin{defn}
+    An ideal $\mathfrak{p}$ in A is prime if $\mathfrak{p}\neq (1)$ and if $xy\in \mathfrak{p} \implies x \in \mathfrak{p} or $y \in \mathfrak{p}$.
+An ideal $\mathfrak{m}$ in A is maximal if $\mathfrak{m} \neq (1)$ and if there is no ideal $\mathfrak{a}$ such that $\mathfrak{m\subset a\subset} (1)$. Equivalently:
+$$\mathfrak{p} \text{ is prime } \Leftrightarrow A/\mathfrak{p} \text{ is an integral domain }$$
+$$\mathfrak{m} \text{ is maximal } \Leftrightarrow A/\mathfrak{p} \text{ is a field }$$
+Hence a maximal ideal is prime. But the converse is not true in general. 
+\end{defn}
+
+\begin{enumerate} 
+    \item If $f: A \rightarrow B$ is a ring homomorphism and $\mathfrak{q}$ is a prime ideal in B, then $f^{-1}(\mathfrak{q})$ is a prime ideal in A, for $A/f^{-1}(\mathfrak{q})$ is isomorphic to a subring of $B/\mathfrak{q}$ and hence has no zero-divisor $\neq 0$. 
+\end{enumerate}
+
 \begin{theorem}
-    There is a one-to-one order-preserving correspondence between the ideals \(\mathfrak{b}\) of $A$ which contain \(\mathfrak{a}\), and the ideals $\bar\mathfrak{b}$ of $A/\mathfrak{a}$, given by $\mathfrak{b} = \phi^{-1}(\mathfrak{b})$. 
+    Every commutative ring A (with identity) $\neq 0$ has at least one maximal ideal.
 \end{theorem}
 
-\subsection{Prime and Maximal Ideals}
-An ideal $\mathfrak{p}$ in $A$ is prime if $\mathfrak{p} \neq (1)$ and if $xy\in \mathfrak{p}\implies x\in \mathfrak{p} \text{ or } y\in \mathfrak{p}$.
+\begin{corollary}
+    Every non-unit of A is contained in a maximal ideal.
+\end{corollary}
 
-An ideal $\mathfrak{m}$ in $A$ is maximal if $\mathfrak{m}\neq (1)$ and if there is no ideal $\mathfrak{a}$ such that $\mathfrak{m\subset a}\subset (1)$. Equivalently,
-$$\mathfrak{p} \text{ is prime } \Leftrightarrow A/\mathfrak{p} \text{ is an integral domain}$$
-$$\mathfrak{m} \text{ is maximal} \Leftrightarrow A/\mathfrak{m} \text{ is a field}$$
+\begin{defn}
+    A ring A with exactly one maximal ideal $\mathfrak{m}$ is called a local ring. The field $k=A/\mathfrak{m}$ is called the residue field of A.
+\end{defn}
 
-\begin{theorem}
-    Every ring $A\neq 0$ has at least one maximal ideal.
-\end{theorem}
+\begin{prop}
+    \begin{enumerate}
+        \item Let A be a ring and $\mathfrak{m} \neq (1)$ an ideal of A such that every $x\in A-\mathfrak{m}$ is a unit in A. Then A is a local ring and $\mathfrak{m}$ its maximal ideal. 
+        \item Let A be a ring and $\mathfrak{m}$ a maximal ideal of A, such that every element of $\mathfrak{1+m}$ (every $1+x$ where $x\in \mathfrak{m}$) is a unit in A. Then A is a local ring.
+    \end{enumerate}
+\end{prop}
 
-\subsection{Nilradical and Jacobson Radical}
+\begin{examples}
+     $A = k[x_1, \cdots, x_n], k$ is a field. Let $f\in A$ be an irreducible polynomial. By unique factorization, the ideal $(f)$ is prime. 
+ \end{examples}
+ \begin{examples}
+ $A = Z$. Every ideal in $Z$ is of the form $(m)$ for some $m\geq 0$. The ideal $(m)$ is prime $\Leftrightarrow \mathfrak{m} = 0$ or a prime number. All the ideals $(p)$, where $\mathfrak{p}$ is a prime number are maximal: $Z/(p)$ is a field of $p$ elements.
+\end{examples}
 
-The set $\mathfrak{N}$ of all nilpotent elements of a ring $A$ is an ideal called the nilradical. The nilradical of $A$ is the intersection of all the prime ideals of $A$.
+\section{Nilradical and Jacobson Radical}
 
-The Jacobson radical $\mathfrak{R}$ of $A$ is defined to be the intersection of all the maximal ideals of $A$. It can be characterized as follows:
+\begin{prop}
+    The set $\mathfrak{N}$ of all nilpotent elements in a ring A is an ideal and $A/\mathfrak{N}$ has no nilpotent element $\neq 0$.
+\end{prop}
 
-\begin{theorem}
-    $x\in \mathfrak{R} \Leftrightarrow 1-xy$ is a unit in $A$ for all $y\in A$.
-\end{theorem}
+\begin{defn}
+    The ideal $\mathfrak{N}$ is called the nilradical of A. The following proposition gives an alternative definition of $\mathfrak{N}$:
+\end{defn}
 
-\section{Exercises}
-\subsection{The prime spectrum of a ring}
+\begin{prop}
+    The nilradical of $A$ is the intersection of all the prime ideals of A.
+\end{prop}
 
-We denote by $X = Spec(A)$ the set of all prime ideals of the ring $A$. This is called the prime spectrum of the ring $A$. If we think of each prime ideal $\mathfrak{p}_x$ as a point $x\in X$ then we can associate a topology to the space $X$ called the Zariski Topology.
+\begin{defn}
+    The Jacobson radical of $\mathfrak{R}$ of A is defined to be the intersection of all the maximal ideals of A. It can be characterized as follows:
+\end{defn}
 
-Let $E\subset A$ be a subset of $A$. Then let $V(E)$ denote the set of all prime ideals of A which contain E.
+\begin{prop}
+    $x\in \mathfrak{R} \Leftrightarrow 1-xy$ is a unit in A for all $y\in A$.
+\end{prop}
 
-\textbf{Exercises 16.} Prove that
+\section{Some properties of ideals}
 
-i) If $\mathfrak{a}$ is the ideal generated by $E$, then $V(E) = V(\mathfrak{a}) = V(r(\mathfrak{a}))$.
+\begin{defn}
+    If $\mathfrak{a, b}$ are ideals in a ring A, their *ideal quotient* is 
+$$\mathfrak{(a:b)} = \{x\in A: x\mathfrak{b\subseteq a}\}$$
+which is an ideal. 
+In particular, $(0:\mathfrak{b})$ is called the *annihilator* of $\mathfrak{b}$ and is also denoted by $\text{Ann}(\mathfrak{b})$.
+\end{defn}
 
-ii) $V(0) = X, V(1) = \varnothing$.
+\begin{defn}
+    If $\mathfrak{a}$ is any ideal of A, the radical of $\mathfrak{a}$ is
+$$r(\mathfrak{a}) = \{x\in A: x^n\in \mathfrak{a} \text{ for some } n>0\}$$
+If $\phi: A\rightarrow A/\mathfrak{a}$ is the standard homomorphism, then $r(\mathfrak{a}) = \phi^{-1}(\mathfrak{N}_{A/\mathfrak{a}})$ and hence $r(\mathfrak{a})$ is an ideal by (1.7).
+\end{defn}
 
-iii) if $(E_i)_{i\in I}$ is any family of subsets of A, then
-$$V(\cup_{i\in I} E_i) = \cap_{i\in I} V(E_i)$$
-iv) $V(\mathfrak{a\cap b}) = V(\mathfrak{ab}) = V(\mathfrak{a}) \cup V(\mathfrak{b})$ for any ideal $\mathfrak{a,b}$ of $A$.
+\begin{exercise}
+    \begin{enumerate}
+        \item $r(\mathfrak{a}) \supseteq \mathfrak{a}$
+        \item $r(r(\mathfrak{a})) = r(\mathfrak{a})$
+        \item $r(\mathfrak{ab}) = r(\mathfrak{a\cap b}) = r(\mathfrak{a}) \cap r(\mathfrak{b})$
+        \item $r(\mathfrak{ab}) = (1) \Leftrightarrow \mathfrak{a} = (1)$
+        \item $r(\mathfrak{a+b}) = r(r(\mathfrak{a}) + r(\mathfrak{b}))$
+        \item If $\mathfrak{p}$ is prime, $r(\mathfrak{p}^n) = \mathfrak{p}$ for all $n>0$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{prop}
+    The radical of an ideal $\mathfrak{a}$ is the intersection of the prime ideals which contain $\mathfrak{a}$.
+\end{prop}
+
+\begin{prop}
+    $D =$ set of zero-divisors of $A = \bigcup_{x\neq 0} r(\text{Ann}(x))$.
+\end{prop}
+
+\begin{prop}
+    Let $\mathfrak{a,b}$ be ideals in a ring A such that $r(\mathfrak{a}), r(\mathfrak{b})$ are coprime. Then $\mathfrak{a,b}$ are coprime.
+\end{prop}
+
 
 \chapter{Modules}
+
+\section{Modules and Module homomorphisms}
+
+\begin{defn}
+    Let $M$ be an abelian group and let A be a commutative ring that acts *linearly* on M. If we denote $\mu(a,x) = ax,$ where $a\in A, x \in M$ and the following axioms are satisfied,
+    \begin{enumerate}
+        \item $a(x+y) = ax + ay$
+        \item $(a+b)x = ax + bx$
+        \item $(ab)x = a(bx)$
+        \item $1x = x$, 
+ ($\forall a,b \in A, \forall x,y \in M$.)
+    \end{enumerate}
+ 
+Then $(M,\mu)$ is called a module
+\end{defn}
+
+\section{Submodules and Quotient Modules}
+
+\begin{defn}
+    A submodule $M'$ of $M$ is a subgroup that is closed under multiplication by elements of $A$. The quotient $M/M'$ is also an A-module is the action of $A$ on the quotient is $a(x + M') = ax + M'$.
+\end{defn}
+
+\begin{defn}
+    If $f:M \rightarrow N$ A-module homomorphism then,
+    \begin{enumerate}
+        \item $Ker(f) = \{x \in M: f(x) = 0\}$
+        \item $Im(f) = f(M)$
+        \item The cokernel of f is denoted by, $Coker(f) = N/Im(f)$
+    \end{enumerate}
+\end{defn}
+
+\begin{prop}
+    There is a one-to-one order preserving correspondence between the submodules of $M$ containing the submodule $M'$ and the submodules of the quotient $M/M'$. The correspondence for ideals is a special case of this proposition. 
+\end{prop}
+
+\begin{defn} (Induced homomorphism)
+    If $M' \subseteq Ker(f)$. Define $\bar f: M/M' \rightarrow N$ as $\bar f(\bar x) = f(x)$. Then it is a homomorphism and it is said to be induced by $f$. Specially we have, $Ker(\bar f) = Ker(f)/M'$.
+
+If we take $Ker(f) = M'$ we have that $M/Ker(f) \cong Im(f)$.
+\end{defn}
+
+\begin{prop}
+    \begin{enumerate}
+        \item If $L \supseteq M \supseteq N$ are A-modules, then 
+$$\frac{L/N}{M/N} = L/M.$$
+    \item If $M_1,M_2$ are submodules of $M$, then
+$$(M_1+M_2)/M_1 \cong M_2/(M_1 \cap M_2).$$
+    \end{enumerate}
+\end{prop}
+
+\subsection{Some important notes}
+\begin{enumerate}
+    \item The product $aM$ where $a$ is an ideal is the set of all finite sums $\sum a_i x_i$ with $a_i \in a, x_i \in M$. 
+    \item If $N,P$ are submodules of M then $(N:P) = \{a\in A: aP \subseteq N\}$.
+    \item The annihilator, $Ann(M) = (0,M) = \{a\in A: aM=0\}$
+    \item An A-module is called *faithful* if $Ann(M) = 0$.
+    \item If $a \subseteq Ann(M)$ we can define $M$ as an $A/a$-module by setting $\bar x m = xm$, $\bar x\in A/a, m\in M$. This is true as $x,y\in \bar x$ then $x-y \in a$ hence $(x-y)m = 0 \implies xm = ym$. So it's indepenent of the choice of the representative of $\bar x$. 
+    \item If $Ann(M) = a$, then $M$ is faithful as an $A/a-$module.
+\end{enumerate}
+
+\section{Direct Sum and Product}
+
+\begin{defn} (Direct Sum) Given two A-moduels M and N their direct product denoted by $M \oplus N$ is defined as the set of all pair $(x,y)$ such that $x \in M$ and $y \in N$ and is an A-module by,
+$$(x_1,y_1) + (x_2,y_2) = (x_1+x_2, y_1+y_2)$$ 
+$$a.(x,y) = (ax,ay)$$
+ 
+If $(M_i)_{i\in I}$ is a family of A-modules then the direct sum $\oplus_{i\in I} M_i$ is the set of all $(x_i)_{i\in I}$ such that all but finitely many $x_i$ are zero. 
+\end{defn}
+
+\begin{defn} (Direct Product) The direct product of a family of A-modules denoted by $\prod_{i\in I} M_i$, is exactly the same as the direct sum if $I$ is finite. Otherwise the only difference is that $(x_i)_{i\in I}$ does not have the condition that $x_i$ must be zero for all but finitely many $x_i$.
+\end{defn}
+
+
+\section{Finitely Generated Module}
+
+\begin{defn} A module M is said to be finitely generated if it can be expressed as $M = \sum_{i\in I} Ax_i$. That is each $m\in M$ can be expressed as a finite linear combination of elements in A with $x_i$. If the number of $x_i$ is finite then the module is said to be a finitely generated A-module. 
+\end{defn}
+
+\subsection{Free Module}
+
+\begin{defn} A finitely generated free A-module is a module that's isomorphic to $A \oplus \cdots \oplus A$ denoted as $A^{(n)}$ (n summands). If we remove the restriction of being finite a free A-module is isomorphic to a module of the form $\oplus_{i\in I}M_i$, where $M_i$ are A-modules isomorphic to $A$. 
+* $A^0$ is the zero module denoted by $0$. 
+\end{defn}
+
+\begin{prop} $M$ is a finitely generated A-module if and only if $M$ is isomorphic to a quotient of $A^n$ for some $n>1$. 
+\end{prop}
+
+\begin{defn} Let $M$ be a finitely generated A-module and $a\subseteq A$ be an ideal of $M$. If $\phi$ is an endomorphism of $M$ such that $\phi(M) \subseteq aM$ then $\phi$ satisfies a polynomial equation in $\phi$,
+$$\phi^n + a_1 \phi^{n-1} + \cdots + a^n = 0,$$
+for some $a_i \in a$. 
+\end{defn}
+
+\begin{corollary} If $M$ is a finitely generated module such that  for an ideal $a \subseteq A$, $aM = M$ then there exists an $x \equiv 1 ( mod\ a)$ such that $xM = 0$. 
+\end{corollary}
+
+\begin{prop} (Nakayama's lemma) If $M$ is a finitely generated module and $a \subseteq A$ is an ideal of $A$ contained in the Jacobson radical of $A$ then $aM = M$ implies that $M = 0$. 
+\end{prop}
+
+\begin{prop} Suppose $M$ is finitely generated A-module and $a$ is an ideal contained in the Jacobson radical of $A$ then $aM = M + N$ implies that $M = N$ for any submodule $N$ of $M$. 
+\end{prop}
+
+\begin{prop} Let $x_i$ be element of $M$ whose image in $M/mM$ are the basis of this vector space. Then the $x_i$ generate $M$.	
+\end{prop}
+
+\section{Exact Sequence}
+
+\begin{defn}
+A sequence of A-modules and A-homomorphisms,
+$$\cdots \rightarrow M_{i-1} \rightarrow^{f_i} M_i \rightarrow^{f_{i+1}} M_{i+1} \rightarrow \cdots$$ 
+is said to be exact at $M_i$ if, $Ker(f_{i+1}) = Im{f_i}$. The sequence is exact if it is exact at each $M_i$. 
+\end{defn}
+
+\begin{enumerate}
+    \item $0 \rightarrow M' \rightarrow^{f} M$ is exact $\Leftrightarrow$ $f$ is inective.
+    \item $M \rightarrow^{g} M'' \rightarrow 0$ is exact $\Leftrightarrow$ $g$ is surjective. 
+    \item $0 \rightarrow M' \rightarrow^{f} M \rightarrow^{g} M'' \rightarrow 0$ is exact $\Leftrightarrow$ $f$ is injective and $g$ is surjective. But also $Coker(f) = M/f(M')$ is isomorphic to $M''$. \item This type of exact sequence is also called a short exact sequence. Any exact sequence can be split up into a collection of short exact sequences. If $N_i = Im(f_i) = Ker(f_{i+1})$ we have the short exact sequence $0\rightarrow N_i \rightarrow M_i \rightarrow N_{i+1} \rightarrow 0$ for each $i$. 
+\end{enumerate}
+
+\section{Tensor Product of Modules}
+
+\begin{defn} (Tensor product) The tensor product of two A-modules M and N is the A-module $M\otimes N$ of all linear combination of the pair $x \otimes y$ with coefficients in $A$ along with the following properties,
+    \begin{enumerate}
+        \item $(x + x') \otimes y = x \otimes y + x' \otimes y$
+        \item $x \otimes (y + y') = x \otimes y + x \otimes y'$
+        \item $a.x \otimes y = x \otimes a.y = a(x \otimes y)$
+    \end{enumerate}
+\end{defn}
+
+Properties:
+\begin{enumerate}
+    \item $0 \otimes x = 0$
+    \item If $x_i$ generates M and $y_i$ generates N then $x_i \otimes y_i$ generates $M\otimes N$. 
+    \item Let $x\in M$ and $y\in N$ if $M' \subseteq M$ and $N'\subseteq N$ are submodules then $x\otimes y \in M\otimes N$ is not the same as $x\otimes y \in M'\otimes N'$ 
+    \item To be specific the tensor product of A-modules is denoted by $M \otimes_A N$ but if the context is clear we can write $M\otimes N$. 
+\end{enumerate}
+
+\textbf{Note:} The correct definition of a tensor product is by a universal property that there's a one to one correspondence between the bilinear maps $M \times N \rightarrow P$ and the A-linear map $M\otimes N\rightarrow P$. But this is not important nor useful at this stage. Whatever it is is ultimately exactly equivalent to the definition above. 
 
 \chapter{Rings and Modules of Fractions}
 

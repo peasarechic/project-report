@@ -6,34 +6,20 @@ much delay between thinking and excecution. The zeroth draft should be on paper.
 
 ## Project Outline
 
-### Chap 1
-1. Construction of algebraic closure of fields
-2. Affine algebraic varieties, Ex 27, 28
-3. Stone's Theorem
-4. Ex. 17 (Zarski Topology), 18, 16, (20.iv), Ex 21
-5. Ex 26
+1. History of Algebraic Geometry
+    1. 27 curves
+    2. Bezout's theorem
+2. Rings and Ideals *
+3. Prime and maximal ideal *
+4. Prime spectrum Spec(A), Zariski Topology, Ex 17, 18, 16, 20.iv, 21, 26, 27; *
+5. Nullstellensatz
+6. Modules, tensor product, Exactness properties of tensor products *
+7. Localization, Local properties *
+8. Intgral dependence, going-up theorem * 
+10. Future line of study
+11. Further Applications
 
-### Chap 2
-1. Tor module, Ex 24
-2. Defn: tensor product, exact tensors
-3. Exactness properties of tensor product. Left/right adjoint functors
-
-### Chap 3
-1. Localization 
-...
-
-### Chap 5
-1. Going-up theorem
-
-
-### Vakil's Notes
-1. Hilbert's Nullstellensatz 
-2. Sheaves: interpretation of differential manifolds using sheaves
-3. Bezout's theorem
-
-### Applications
-1. String theory
-2. Calabi-Yau Manifolds
-3. Elliptic Curves
-
-
+## Plan of Action
+1. Write down on paper a detailed list of definitions, theorems and exercises that you wish to include from only the * ed portions.
+2. Do a full info dump where you copy the definitions from your notes as well as from the text book.
+3. Go through what you dumped tighten it up and explain it to someone seeing it for the first time. 
