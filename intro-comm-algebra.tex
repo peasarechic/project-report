@@ -1,6 +1,6 @@
 \documentclass[]{report}
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
-\usepackage[a4paper, total={4in, 8in}]{geometry}
+\usepackage[a4paper, total={5in, 8in}]{geometry}
 
 
 % user defined commands go here
@@ -36,8 +36,16 @@
 
 
 \chapter{Hilbert's Nullstellensatz}
-\section{Basics ideas in ring theory} % provide some basic definitions and motivate the study of the nullstellensatz showing the connection between geometry and algebra
 \section{The Nullstellensatz}
+
+\begin{theorem}
+    (Hilbert's Nullstellensatz). Suppose $\bar{k} = k$. Then, the following statements are both true and equivalent:
+    \begin{enumerate}
+        \item Given an ideal $J\subset \mathbb{A}^n_k$, we have $\sqrt{J} = I(V(J))$,
+        \item Given an ideal $J\subset \mathbb{A}^n_k$, we have the implication $(V(J)) = \varnothing \implies J = \bar{k}[x_1,\cdots,x_n])$,
+        \item The maximal ideals of $k[x_1,\cdots,x_n]$ are exactly $J = (x_1-a,\cdots, x_n-a_n), (a_1,\cdots,a_n)\in k^n$, with $\bar{k}[x_1,\cdots,x_n]/J \cong \bar{k}$
+    \end{enumerate}
+\end{theorem}
 
 % The statement of the theorems and proofs go here. Focus most effort here.
 \chapter{Rings and Ideals}
@@ -259,6 +267,87 @@ If $\phi: A\rightarrow A/\mathfrak{a}$ is the standard homomorphism, then $r(\ma
     (Ex 18)
 \end{exercise}
 
+\begin{exercise}
+    A topological space $X$ is said to be irreducible if $X \neq \varnothing$ and if every pair of non-empty open sets in $X$ intersect, or equivalently if every non-empty open set is dense in $X$. Show that $\text{Spec}(A)$ is irreducible if and only if the nilradical of $A$ is a prime ideal. 
+    (Ex 19)
+\end{exercise}
+
+\begin{exercise}
+    Let $X$ be a topological space.
+    \begin{enumerate}
+        \item If $Y$ is an irreducible (Ex 19) subspace of $X$, then the closure $\bar{Y}$ of $Y$ in $X$ is irreducible.
+        \item Every irreducible subspace of $X$ is contained in a maximal irreducible subspace. 
+        \item The maximal irreducible subspaces of $X$ are closed and cover $X$. They are called the irreducible components of $X$. What are the irreducible components of a Hausdorff space?
+        \item If $A$ is a ring and $X = \text{Spec}(A)$, then the irreducible components of $X$ are the closed sets $V(\mathfrak{p})$, where $\mathfrak{p}$ is a maximal prime ideal of $A$. (Ex 8)
+    \end{enumerate}
+    (Ex 20)
+\end{exercise}
+
+\begin{exercise}
+    Let $\phi: A\rightarrow B$ be a ring homomorphism. Let $X = \text{Spec}(A)$ and $Y = \text{Spec}(B)$. If $\mathfrak{q}\in Y$, then $\phi^{-1}(\mathfrak{q})$ is a prime ideal of $A$, i.e., a point of $X$. Hence $\phi$ induces a mapping $\phi^*: Y\rightarrow X$. Show that
+    \begin{enumerate}
+        \item If $f\in A$ then $\phi^{*-1}(X_f) = Y_{\phi(f)}$, and hence that $\phi^*$ is continuous.
+        \item If $\mathfrak{a}$ is an ideal of $A$, then $\phi^{*-1}(V(\mathfrak{a})) = V(\mathfrak{a}^e)$. 
+        \item If $\mathfrak{b}$ is an ideal of $B$, then $\bar{\phi^*(V(\mathfrak{b}))} = V(\mathfrak{b}^e)$. 
+        \item If $\phi$ is surjective, then $\phi^*$ is a homeomorphism of $Y$ onto the closed subset $V(Ker(\phi))$ of $X$. (In particular, $\text{Spec}(A)$ and $\text{Spec}(A/\mathfrak{N})$ (where $\mathfrak{N}$ is the nilradical of $A$) are naturally homeomorphic.)
+        \item If $\phi$ is injective, then $\phi^*(Y)$ is dense in $X$. More precisely, $\phi^*(Y)$ is dense in $X\Leftrightarrow Ker(\phi) \subseteq \mathfrak{N}$.
+        \item Let $\psi: B\rightarrow C$ be another ring homomorphism. Then $(\psi \circ \phi)^* = \phi^* \circ \psi^*$. 
+        \item Let $A$ be an integral domain with just one non-zero prime ideal $\mathfrak{p}$, and let $K$ be the field of fractions of $A$. Let $B = (A/\mathfrak{p}) \times K$. Define $\phi: A\rightarrow B$ by $\phi(x) = (\bar{x}, x)$, where $\bar{x}$ is the image of $x$ in $A/\mathfrak{p}$. Show that $\phi^*$ is bijective but not a homeomorphism.
+    \end{enumerate}
+    (Ex 21)
+\end{exercise}
+
+\begin{exercise}
+    Let $A$ be a ring. The subspace of $\text{Spec}(A)$ consisting of the maximal ideals of $A$, with the induced topology, is called the maximal spectrum of $A$ and is denoted by $\text{Max}(A)$. For arbitary commutative rings it does not have the nice functorial properties of $\text{Spec}(A)$ (see Ex 21), because the inverse image of a maximal ideal under a ring homomorphism need not be maximal.
+    Let $X$ be a compact Hausdorff space and let $C(x)$ denote the ring of all real-valued continuous functions on $X$ (add and multiply functions by adding and multiplying their values). For each $x\in X$, let $\mathfrak{m}_x$ is maximal, because it is the kernel of the (surjective) homomorphism $C(X) \rightarrow \mathbb{R}$ which takes $f$ to $f(x)$. If $\hat{X}$ denotes $\text{Max}(C(X))$, we have therefore defined a mapping $\mu: X\rightarrow \hat{X}$, namely $x\mapsto \mathfrak{m}_x$. 
+    We shall show that $\mu$ is a homeomorphism of $X$ onto $\hat{X}$. 
+    \begin{enumerate}
+        \item Let $\mathfrak{m}$ be any maximal ideal of $C(X)$, and let $V = V(\mathfrak{m})$ be the set of common zeros of the functions in $\mathfrak{m}$: that is,
+            $$V =\{x \in X: f(x) = 0 \text{ for all } f\in \mathfrak{m}\}.$$
+            Suppose that $V$ is empty. Then for each $x\in X$ there exists $f_x \in \mathfrak{m}$ such that $f_x(x) \neq 0$. Since $f_x$ is continuous, there is an open neighborhood $U_x$ of $x$ in $X$ on which $f_x$ does not vanish. By compactness a finite number of the neighborhoods, say $U_{x_1},\cdots,U_{x_n}$ cover $X$. Let
+            $$f = f^2_{x_1} + \cdots + f^2_{x_n}.$$
+            Then $f$ does not vanish at any point of $X$, hence is a unit in $C(X)$. But this contradicts $f\in \mathfrak{m}$, hence $V$ is not empty.
+            Let $x$ be a point of $V$. Then $\mathfrak{m} \subseteq \mathfrak{m}_x$, hence $\mathfrak{m} = \mathfrak{m}_x$ because $\mathfrak{m}$ is maximal. Hence $\mu$ is surjective.
+        \item By Urysohn's lemma (this is the only non-trivial fact required in the argument) the continuous functions separate the points of $X$. Hence $x\neq y \Rightarrow \mathfrak{m}_x \neq \mathfrak{m}_y$, and therefore $\mu$ is injective. 
+        \item Let $f\in C(x)$; let
+            $$U_f = \{x\in X:f(x) \neq 0\}$$
+            and let
+            $$\hat{U}_f = \{\mathfrak{m} \in \hat{X}: f\not\in \mathfrak{m}\}$$
+            Show that $\mu(U_f) = \hat{U}_f$. The open sets $U_f$ (resp. $\hat{U}_f$) form a basis of the topology of $X$ (resp. $\hat{X}$) and therefore $\mu$ is a homeomorphism.
+            Thus $X$ can be reconstructed from the ring of functions $C(X)$. 
+    \end{enumerate}
+    (Ex 26)
+\end{exercise}
+
+\begin{exercise}
+    Let $k$ be an algebraically closed field and let
+        $$f_\alpha(t_1,\cdots,t_n) = 0$$
+    be a set of polynomial equations in $n$ variables with coefficients in $k$. The set $X$ of all points $x = (x_1,\cdots,x_n)\in k^n$ which satisfy these equations is an affine algebraic variety.
+
+    Consider the set of all polynomials $g\in k[t_1,\cdots,t_n]$ with the property that $g(x) = 0$ for all $x\in X$. This set is an ideal $I(X)$ in the polynomial ring, and is called the ideal of the variety $X$. The quotient ring
+        $$P(X) = k[t_1,\cdots,t_n]/I(X)$$
+    is the ring of polynomial functions on $X$, because two polynomials $g, h$ define the same polynomial function on $X$ if an only if $g-h$ vanishes at every point of $X$, that is, if and only if $g-h\in I(X)$.
+
+    Let $\xi_i$ be the image of $t_i$ in $P(X)$. The $\xi_i (1\leq i \leq n)$ are the coordinate functions on $X$: if $x\in X$, then $\xi_i(x)$ is the $i$th coordinate of $x$. $P(X)$ is generated as a $k$-algebra by the coordinate functions, and is called the coordinate ring (or affine algebra) of $X$.
+
+    As in Ex 26, for each $x\in X$ let $\mathfrak{m}_x$ be the ideal of all $f\in P(X)$ such that $f(x) = 0$; it is maximal ideal of $P(X)$. Hence, if $\hat{X} = \text{Max}(P(X))$, we have defined a mapping $\mu: X\rightarrow \hat{X}$, namely $x\mapsto \mathfrak{m}_x$.
+
+    It is easy to show that $\mu$ is injective: if $x\neq y$, we must have $x_i \neq y_i$ for some $i(1\neq i\neq n)$, and hence $\xi_i = x_i$ is in $\mathfrak{m}_x$ but not in $\mathfrak{m}_y$, so that $\mathfrak{m}_x \neq \mathfrak{m}_y$. What is less obvious (but still true) is that $\mu$ is surjective. This is one form of Hilbert's Nullstellensatz.
+    (Ex 27)
+\end{exercise}
+
+\begin{exercise}
+    Let $f_1,\cdots,f_m$ be elements of $k[t_1,\cdots,t_n]$. They determine a polynomial mapping $\phi: k^n\rightarrow k^m$: if $x\in k^n$, the coordinates of $\phi(x)$ are $f_1(x),\cdots,f_m(x)$.
+
+    Let $X,y$ be affine algebraic varieties in $k^n$, $k^m$ respectively. A mapping $\phi: X\rightarrow Y$ is said to be regular if $\phi$ is the restriction to $X$ of a polynomial mapping from $k^n$ be $k^m$.
+
+    If $\eta$ is a polynomial function on $Y$, then $\eta \circ \phi$ is a polynomial function on $X$. Hence $\phi$ induces a $k$-algebra homomorphism $P(Y)\rightarrow P(X)$, namely $\eta \mapsto \eta \circ \phi$.
+
+    Show that in this way we obtain a one-to-one correspondence between the regualr mappings $X\mapsto Y$ and the $k$-algebra homomorphisms $P(Y) \rightarrow P(X)$.
+    (Ex 28)
+\end{exercise}
+    
+
 
 % End of Chapter
 
@@ -462,6 +551,28 @@ In general tensoring with an A-module does not turn an exact sequence into anoth
     \end{enumerate}
 \end{prop}
 
+\begin{exercise}
+    A partially ordered set $I$ is said to be a directed set if for each pair $i, j$ in $I$ there exists $k\in I$ such that $i\leq k$ and $j\leq k$. 
+
+    Let $A$ be a ring, let $I$ be a directed set and let $(M_i)_{i\in I}$ be a family of $A$-modules indexed by $I$. For each pair $i,j$ in $I$ such that $i\leq j$, let $\mu_{ij}: M_i \rightarrow M_j$ be an $A$-homomorphism, and suppose that the following axioms are satisfied:
+    \begin{enumerate}
+        \item $\mu_{ij}$ is the identity mapping of $M_i$, for all $i\in I$.
+        \item $\mu_{ik} = \mu_{jk} \circ \mu_{ij}$ whenever $i\leq j\leq k$.
+    \end{enumerate}
+
+    Then the module $M_i$ and homomorphism $\mu_{ij}$ are said to form a directed system  $M = (M_i, \mu_{ij})$ over the directed set $I$. 
+
+    We shall construct an $A$-module $M$ called the direct limit of the direct system $M$. Let $C$ be the direct sum of the $M_i$, and identify each module $M_i$ with it's canonical image in $C$. Let $D$ be the submodule of $C$ generated by all elements of the form $x_i-\mu_{ij}(x_i)$ where $i\leq j$ and $x_i\in M_i$, Let $M= C/D$, let $\mu: C \rightarrow M$ be the projection and let $\mu_j$ be the restriction of $\mu$ to $M_i$. 
+
+    The module $M$, or more correctly the pair consisting of $M$ and the family of homomorphisms $\mu_i: M_i \rightarrow M$, is called the direct limit of the direct sytem $M$, and is written $\varinjlim M_i$. From the construction it is clear that $\mu_i = \mu_j \circ \mu_{ij}$ whenever $i\leq j$.
+    (Ex 14)
+\end{exercise}
+
+\begin{exercise}
+    Show that the direct limit is characterized (up to isomorphism) by the following property. Let $N$ be an $A$-module and for each $i\in I$ let $\alpha_i: M_i\rightarrow N$ be an $A$-module homomorphism such that $\alpha_i = \alpha_j \circ \mu_{ij}$ whenever $i\leq j$. Then there exists a unique homomorphism $\alpha: M\rightarrow N$ such that $\alpha_i = \alpha \circ \mu_i$ for all $i\in I$.
+    (Ex 16)
+\end{exercise}
+
 \chapter{Rings and Modules of Fractions}
 
 \section{Ring of Fractions}
@@ -568,8 +679,111 @@ Similarily with "injective" replaced by "surjective" throughout.
     \end{enumerate}
 \end{prop}
 
+\begin{exercise}
+    \begin{enumerate}
+        \item Let $A$ be a ring. $S$ is a multiplicativel closed subset of $A$, and $\phi: A\rightarrow S^{-1}A$ the canonical homomorphism. Show that $\phi^*: Spec(S^{-1}A) \rightarrow Spec(A)$ is a homomorphism of $Spec(S^{-1}A)$ onto it's image in $X = Spec(A)$. Let this image be denoted by $S^{-1}X$.    
+    In particular, if $f\in A$, the image of $Spec(A_f)$ in $X$ is the basic open set $X_f$. 
+        \item Let $f:A \rightarrow B$ be a ring homomorphism. Let $X = Spec(A)$ and $Y = Spec(B)$, and let $f^*: Y\rightarrow X$ be the mapping associated with $f$. Identifying $Spec(S^{-1}A)$ with its canonical image $S^{-1}X$ in $X$, and $Spec(S^{-1}B) (= Spec (f(S)^{-1}B))$ with its canonical image $S^{-1}Y$ in $Y$, show that $S^{-1}f^*: Spec(S^{-1}B)\rightarrow Spec(S^{-1}A)$ is the restriction of $f^*$ to $S^{-1}Y$, and that $S^{-1}Y = f^{*-1}(S^{-1}X)$.
+        \item Let $\mathfrak{a}$ be an ideal of $A$ and let $\mathfrak{b} = \mathfrak{b}^e$ be it's extension in $B$. Let $\bar{f}:A/\mathfrak{a} \rightarrow B/\mathfrak{b}$ be the homomorphism induced by $f$. If $Spec(A/\mathfrak{a})$ is identified with its cannonical image $V(\mathfrak{a})$ in $X$, and $Spec(B/\mathfrak{b})$ with its image $V(\mathfrak{b})$ in $Y$, show that $\bar{f}^*$ is the restriction of $f^*$ to $V(\mathfrak{b})$.
+        \item Let $\mathfrak{p}$ be a prime ideal of $A$. Take $S = A - \mathfrak{p}$ in 2) and then reduce $\text{mod } S^{-1}\mathfrak{p}$ as in 3). Deduce that the subspace $f^{*-1}(\mathfrak{]})$ of $Y$ is naturally homeomorphic to $Spec(B_\mathfrak{p}/\mathfrak{p}B_\mathfrak{p}) = Spec(k(\mathfrak{p}) \otimes_A B)$, where $k(\mathfrak{p}$ is the residue field of the local ring $A_\mathfrak{p}$.
 
-\chapter{Integral Dependence}
+            $Spec(k(\mathfrak{p}) \otimes_A B)$ is called the fiber of $f^*$ over $\mathfrak{p}$. 
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Let $A$ be a ring and $\mathfrak{p}$ a prime ideal of $A$. Then the canonical image of $Spec(A_\mathfrak{p})$ in $Spec(A)$ is equal to the intersection of all the open neighborhoods of $\mathfrak{p}$ in $Spec(A)$. 
+\end{exercise}
+
+
+
+\chapter{Integral Dependence and the Going-Up Theorem}
+
+\section{Integral Dependence}
+
+The going up and going down theorems are due to Cohen-Seidenberg.
+
+\begin{defn} 
+    (Integral element) Let B be a ring and A as subring of B with unity. An element $x$ in B is said to be *integral* over A if $x$ is a root of a *monic* polynomial with coefficients in A, i.e. if $x$ satisfies an equation of the form
+$$x^n + a_1x^{n-1} + \cdots + a_n = 0$$
+where $a_i\in A$. 
+\end{defn}
+
+Every element of A is integral over A.
+
+\begin{examples} 
+    $A = Z, B = Q$. If a rational number $x=r/s$ is integral over $Z$, where $r,s$ have no common factor, we have,
+$$r^n + a_1r^{n-1}s + \cdots + a_ns^n = 0$$
+the $a_i$ being rational integers. Hence $s$ divides $r^n$, hence $s=\pm 1$, hence $x\in Z$.
+\end{examples}
+
+\begin{prop}
+    The following are equivalent:
+    \begin{enumerate}
+        \item $x\in B$ is integral over A.
+        \item $A[x]$ is a finitely generated A-module.
+        \item $A[x]$ is contained in a subring C of B such that C is a finitely generated A-module.
+        \item There exists a faithful $A[x]$-module $M$ which is finitely generated as an A-module.
+    \end{enumerate}
+\end{prop}
+
+\begin{corollary}
+    Let $x_i (1 \leq i \leq n)$ be elements of B, each integral over A. Then the ring $A[x_1,\cdots,x_n]$ is a finitely generated A-module.
+\end{corollary}
+
+\begin{corollary}
+    The set C of elements in B which are integral over A is a subring of B containing A. 
+\end{corollary}
+
+\begin{defn}
+    (Integral Closure) The ring C in the above corollary is called the *integral closure* of A in B. If C=A, then A is said to be *integrally closed* in B. If C=B, the ring B is said to be *integral over* A.
+\end{defn}
+
+\begin{defn}
+    Let $f:A\rightarrow B$ be a ring homomorphism, so that B is an A-algebra. Then $f$ is said to be *integral*, and B is said to be an *integral* A-algebra, if B is integral over its subring $f(A)$. In this terminology, the above results show that,
+$$\text{finite type + integral = finite}$$
+\end{defn}
+
+\begin{corollary}
+    If $A\subseteq B \subseteq C$ are rings and if B is integral over A and C is integral over B, then C is integral over A (transitivity of integral dependence). 
+\end{corollary}
+
+\begin{corollary}
+    Let $A\subseteq B$ be rings and let C be the integral closure of A in B. Then C is integrally closed in B. 
+\end{corollary}
+
+We show that integral dependence is preserved on passing to quotients and to rings of fractions. 
+
+\begin{prop}
+    Let $A\subseteq B$ be rings, B integral over A.
+    \begin{enumerate}
+        \item If $\mathfrak{b}$ is an ideal of B and $\mathfrak{a = b^c} = A \cap \mathfrak{b}$, then $B/\mathfrak{b}$ is integral over $A/\mathfrak{a}$. 
+        \item If S is a multiplicatively closed subset of A, then $S^{-1}B$ is integral over $S^{-1}A$.
+    \end{enumerate}
+\end{prop}
+
+\section{The Going-up Theorem}
+
+\begin{prop}
+    Let $A\subseteq B$ be integral domains, B integral over A. Then B is a field if and only if A is a field. 
+\end{prop}
+
+\begin{corollary}
+    Let $A\subseteq B$ be rings, B integral over A; let $\mathfrak{q}$ be a prime ideal of B and let $\mathfrak{p=q^c=q}\cap A$. Then $\mathfrak{q}$ is maximal if and only if $\mathfrak{p}$ is maximal. 
+\end{corollary}
+
+\begin{corollary}
+    Let $A\subseteq B$ be rings. B integral over A; let $\mathfrak{q,q'}$ be prime ideals of B such that $\mathfrak{q\subseteq q'}$ and $\mathfrak{q^c = q'^{c} = p}$ say. Then $\mathfrak{q=q'}$.
+\end{corollary}
+
+\begin{theorem} 
+    Let $A\subseteq B$ be rings, B integral over A, and let $\mathfrak{p}$ be a prime ideal of A, Then there exists a prime ideal $\mathfrak{q}$ of B such that $\mathfrak{q}\cap A = \mathfrak{p}$. 
+\end{theorem}
+
+\begin{theorem}
+    (Going-up theorem)** Let $A\subseteq B$ be rings, B integral over A; let $\mathfrak{p_1 \subseteq \cdots \subseteq p_n}$ be a chain of prime ideals of A and $\mathfrak{q\subseteq \cdots \subseteq q_m} (m < n )$ a chain of prime ideals of B such that $\mathfrak{q_i}\cap A = \mathfrak{p_i} (1\leq i\leq m)$. Then the chain $\mathfrak{q_1\subset \cdots \subseteq q_m}$ can be extended to a chain $\mathfrak{q_1 \subseteq \cdots \subseteq q_n}$ such that $\mathfrak{q_i}\cap A = \mathfrak{p_i}$ for $1\leq i \leq n$.
+\end{theorem}
+
 
 \begin{thebibliography}{9}
     % type bibliography here
