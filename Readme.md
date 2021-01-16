@@ -23,3 +23,5 @@ much delay between thinking and excecution. The zeroth draft should be on paper.
 1. Write down on paper a detailed list of definitions, theorems and exercises that you wish to include from only the * ed portions.
 2. Do a full info dump where you copy the definitions from your notes as well as from the text book.
 3. Go through what you dumped tighten it up and explain it to someone seeing it for the first time. 
+
+Since writing an introduction and making the thing more thematically cohesive is important you can do that first if you want to! Then to fill up the exercises if it's important to the narrative. 

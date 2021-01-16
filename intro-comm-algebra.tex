@@ -1,6 +1,7 @@
 \documentclass[]{report}
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
 \usepackage[a4paper, total={5in, 8in}]{geometry}
+\usepackage{tikz-cd} % used to draw commutative diagrams
 
 
 % user defined commands go here
@@ -24,28 +25,18 @@
 
 \end{abstract}
 
-\chapter{Introduction: What is Algebraic Geometry?} % this chapter contains no math beyond the statement of the problems
-\section{Some historical problems}
-\subsection{27 lines}
-\subsection{Bezout's Theorem}
-\subsection{Brief History of Algebraic Geometry}
-\section{What is geometry?}
-\section{What is algebra?}
+\chapter{What is Algebraic Geometry?}
 
+Algebraic Geometry is the study of curves. Specifically the study of the solution set of polynomial cuves which are called \textit{varieties}. For example a major branch of algebraic geometry is concerned with the study of special curves called \textif{elliptical curves}. For example, a curve defined by the polynomial equation
+    $$y^2 = x^3+ ax + b$$
 
+Which is one example of a variety, specifically \textif{a projective variety}. 
 
+There are different types of such varieties and algebraic geometry provides a toolbox to study such problems where the solution set of cuves are considered as surfaces and rational functions on such a surfaces form a ring which suprisingly is seen to be, if interpreted correctly, equivalent to the surface which is being described. 
 
-\chapter{Hilbert's Nullstellensatz}
-\section{The Nullstellensatz}
+So in modern algebraic geometry to every ring $A$, we associated a set $X$ which is the set of all prime ideals of $A$. We find that this set called $Spec(A)$ or the \textif{spectrum} of the ring, has a topology on it which turns the set into a topological space. 
 
-\begin{theorem}
-    (Hilbert's Nullstellensatz). Suppose $\bar{k} = k$. Then, the following statements are both true and equivalent:
-    \begin{enumerate}
-        \item Given an ideal $J\subset \mathbb{A}^n_k$, we have $\sqrt{J} = I(V(J))$,
-        \item Given an ideal $J\subset \mathbb{A}^n_k$, we have the implication $(V(J)) = \varnothing \implies J = \bar{k}[x_1,\cdots,x_n])$,
-        \item The maximal ideals of $k[x_1,\cdots,x_n]$ are exactly $J = (x_1-a,\cdots, x_n-a_n), (a_1,\cdots,a_n)\in k^n$, with $\bar{k}[x_1,\cdots,x_n]/J \cong \bar{k}$
-    \end{enumerate}
-\end{theorem}
+So algebraic geometry uses quite a lot of algebraic machinery. That is it uses a lot of important results from Commutative Algebra. 
 
 % The statement of the theorems and proofs go here. Focus most effort here.
 \chapter{Rings and Ideals}
@@ -573,6 +564,8 @@ In general tensoring with an A-module does not turn an exact sequence into anoth
     (Ex 16)
 \end{exercise}
 
+% End of Chapter
+
 \chapter{Rings and Modules of Fractions}
 
 \section{Ring of Fractions}
@@ -689,12 +682,85 @@ Similarily with "injective" replaced by "surjective" throughout.
 
             $Spec(k(\mathfrak{p}) \otimes_A B)$ is called the fiber of $f^*$ over $\mathfrak{p}$. 
     \end{enumerate}
+    (Ex 21)
 \end{exercise}
 
 \begin{exercise}
     Let $A$ be a ring and $\mathfrak{p}$ a prime ideal of $A$. Then the canonical image of $Spec(A_\mathfrak{p})$ in $Spec(A)$ is equal to the intersection of all the open neighborhoods of $\mathfrak{p}$ in $Spec(A)$. 
+    (Ex 22)
 \end{exercise}
 
+\begin{exercise}
+    Let $A$ be a ring, let $X = Spec(A)$ and let $U$ be a basic open set in $X$ (i.e. $U=X_f$, for some $f\in A$: Chapter 1, Ex 17)
+    \begin{enumerate}
+        \item If $U=X_f$, show that the ring $A(U) = A_f$ depends only on $U$ and not on $f$.
+        \item Let $U' = X$, be anohter basic open set such that $U'\subseteq U$. Show that there is an equation of the form $g^{n} = uf$ for some integer $n>0$ and some $u\in A$ and use this to define a homomorphism $\rho: A(U)\rightarrow A(U')$ (i.e, $A_f\rightarrow A_g$) by mapping $a/f^m$ to $au^m/g^{mn}$. Show that $\rho$ depends only on $U$ and $U'$. This homomorphism is called the restriction homomorphism.
+        \item If $U = U'$, then $\rho$ is the identity map.
+        \item If $U \supseteq U' \supseteq U^{''}$ are basic open sets in $X$, show that the diagram
+        $$\begin{tikzcd}
+                A(U) \arrow[rr] \arrow[rd] &  & A(U^{''}) \\
+                & A(U') \arrow[ru] &          
+            \end{tikzcd}$$
+
+            (in which the arrows are restriction homomorphisms) is commutative.
+        \item Let $x (=\mathfrak{p})$ be a point of $X$. Show that
+            $$\varinjlim_{U\ni x} \cong A_\mathfrak{p}$$
+    \end{enumerate}
+
+    The assignment of the ring $A(U)$ to each basic open set $U$ of $X$, and the restriction homomorphism $\rho$, satisfying the conditions 3) and 4) above, constitutes a presheaf of rings on the basic of open sets $(X_f)_{f\in A}$. 5) says that the stalk of this presheaf at $x\in X$ is the corresponding local ring $A_\mathfrak{p}$. 
+    (Ex 23)
+\end{exercise}
+
+\begin{exercise}
+    Show that the presheaf of Ex 23 has the following property. Let $(U_f)_{f\in A}$ be a covering o $X$ by basic open sets. For each $i\in I$ let $s_i\in A(U_i)$ be such that, for each pair of indices $i,j$, the images of $s_i$ and $s_j$ in $A(U_i\cap U_j)$ are equal. Then there exists a unique $s\in A(=A(X))$ whose image in $A(U_i)$ is $s_i$, for all $i\in I$. (This essentially implies that the presheaf is a sheaf.)
+    (Ex 24)
+\end{exercise}
+
+\begin{exercise}
+    \begin{enumerate}
+        \item Let $f_\alpha: A\rightarrow B_\alpha$ be any family of $A$-algebras and let $f:A\rightarrow B$ be their tensor product over $A$ (Chap 2, Ex 23). Then
+            $$f^*(Spec(B)) = \bigcap_\alpha f^*_\alpha(Spec(B_\alpha)).$$
+        \item Let $f_\alpha: A\rightarrow B_\alpha$ be any finite family of $A$-algebras and let $B = \prod_\alpha B_\alpha$. Define $f:A\rightarrow B$ by $f(x) = (f_\alpha(x))$. Then $f^*(Spec(B)) = \bigcup_\alpha f^*_\alpha(Spec(B_\alpha))$. 
+        \item Hence the subsets of $X = Spec(A)$ of the form $f^*(Spec(B))$, where $f:A\rightarrow B$ is a ring homomorphism, satisfy the axioms for closed sets in a topological space. The associated topology is the constrictible topology on $X$. It is finer than the Zariski topology (i.e, there are more open sets, or equivalently more closed sets).
+        \item Let $X_C$ denote the set $X$ endowed with the constrictible topology. Show that $X_C$ is quasi-compact.
+    \end{enumerate}
+    (Ex 27)
+\end{exercise}
+
+\begin{exercise}
+    \begin{enumerate}
+        \item For each $g\in A$, the set $X_g$ (Chap 1, Ex 17) is both open and closed in the constructible topology.
+        \item Let $C'$ denote the smallest topology on $X$ for which the sets $X_g$ are both open and closed, and let $X_C$ denote the set $X$ endowed with this topology. Show that $X_C$ is Hausdorff.
+        \item Deduce that the identity mapping $X_C\rightarrow X_{C'}$ is a homeomorphism. Hence a subset $E$ of $X$ is of the form $f^*(Spec(B))$ for some $f:A\rightarrow B$ if and only if it is closed in the topology of $C'$. 
+        \item The topological space $X_C$ is compact, Hausdorff and totally disconnected. 
+    \end{enumerate}
+    (Ex 28)
+\end{exercise}
+
+\begin{exercise}
+    Let $f:A\rightarrow B$ be a ring homomorphism. Show that $f^*: Spec(B)\rightarrow Spec(A)$ is a continuous closed mapping (i.e., maps closed sets to closed sets) for the constructible topology.
+    (Ex 29)
+\end{exercise}
+
+\begin{exercise}
+    Show that the Zariski topology and the constructible topology on $Spec(A)$ are the same if and only if $A/\mathfrak{N}$ is absolutely flat (where $\mathfrak{N}$ is the nilradical of $A$). 
+    (Ex 30)
+\end{exercise}
+
+\begin{exercise}
+    Let $A$ be a ring. Prove that the following are equivalent:
+    \begin{enumerate}
+        \item $A/\mathfrak{N}$ is absolutely flat ($\mathfrak{N}$ being the nilradical of $A$).
+        \item Every prime ideal of $A$ is maximal.
+        \item $Spec(A)$ is $T_1$-space (i.e., every subset consisting of a single point is closed).
+        \item $Spec(A)$ is Hausdorff.
+    \end{enumerate}
+    If these conditions are satisfied, show that $Spec(A)$ is compact and totally disconnected (i.e., the only connected subsets of $Spec(A)$ are those consisting of a single point). 
+    (Ex 11)
+\end{exercise}
+
+
+% End of Chapter
 
 
 \chapter{Integral Dependence and the Going-Up Theorem}
@@ -783,6 +849,19 @@ We show that integral dependence is preserved on passing to quotients and to rin
 \begin{theorem}
     (Going-up theorem)** Let $A\subseteq B$ be rings, B integral over A; let $\mathfrak{p_1 \subseteq \cdots \subseteq p_n}$ be a chain of prime ideals of A and $\mathfrak{q\subseteq \cdots \subseteq q_m} (m < n )$ a chain of prime ideals of B such that $\mathfrak{q_i}\cap A = \mathfrak{p_i} (1\leq i\leq m)$. Then the chain $\mathfrak{q_1\subset \cdots \subseteq q_m}$ can be extended to a chain $\mathfrak{q_1 \subseteq \cdots \subseteq q_n}$ such that $\mathfrak{q_i}\cap A = \mathfrak{p_i}$ for $1\leq i \leq n$.
 \end{theorem}
+
+\chapter{Hilbert's Nullstellensatz}
+\section{The Nullstellensatz}
+
+\begin{theorem}
+    (Hilbert's Nullstellensatz). Suppose $\bar{k} = k$. Then, the following statements are both true and equivalent:
+    \begin{enumerate}
+        \item Given an ideal $J\subset \mathbb{A}^n_k$, we have $\sqrt{J} = I(V(J))$,
+        \item Given an ideal $J\subset \mathbb{A}^n_k$, we have the implication $(V(J)) = \varnothing \implies J = \bar{k}[x_1,\cdots,x_n])$,
+        \item The maximal ideals of $k[x_1,\cdots,x_n]$ are exactly $J = (x_1-a,\cdots, x_n-a_n), (a_1,\cdots,a_n)\in k^n$, with $\bar{k}[x_1,\cdots,x_n]/J \cong \bar{k}$
+    \end{enumerate}
+\end{theorem}
+
 
 
 \begin{thebibliography}{9}
