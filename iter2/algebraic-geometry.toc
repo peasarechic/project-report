@@ -1,0 +1,15 @@
+\contentsline {chapter}{\numberline {1}Introduction}{2}%
+\contentsline {section}{\numberline {1.1}Prime Spectrum}{3}%
+\contentsline {section}{\numberline {1.2}Zariski Topology}{3}%
+\contentsline {section}{\numberline {1.3}Irreducible Spaces}{3}%
+\contentsline {section}{\numberline {1.4}Affine Algebraic Varieties}{3}%
+\contentsline {chapter}{\numberline {2}Tensor Product and Direct Limits}{4}%
+\contentsline {section}{\numberline {2.1}Tensor Product}{4}%
+\contentsline {section}{\numberline {2.2}Flatness}{4}%
+\contentsline {section}{\numberline {2.3}Direct Limit}{4}%
+\contentsline {chapter}{\numberline {3}Sheaf and Presheaf}{5}%
+\contentsline {section}{\numberline {3.1}Support}{5}%
+\contentsline {section}{\numberline {3.2}Presheaf}{5}%
+\contentsline {section}{\numberline {3.3}Sheaf}{5}%
+\contentsline {section}{\numberline {3.4}Constructible Topology}{5}%
+\contentsline {section}{\numberline {3.5}Absolute Flatness}{5}%

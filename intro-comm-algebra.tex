@@ -1,8 +1,11 @@
 \documentclass[]{report}
-\usepackage{amsmath, amsthm, amssymb, amsfonts}
+
+\usepackage[T1]{fontenc}
+\usepackage[urw-garamond]{mathdesign}
+\usepackage{garamondx}
+\usepackage{amsmath, amsthm, amsfonts}
 \usepackage[a4paper, total={5in, 8in}]{geometry}
 \usepackage{tikz-cd} % used to draw commutative diagrams
-
 
 % user defined commands go here
 \newtheorem{theorem}{Theorem}[section]
@@ -21,22 +24,39 @@
 \maketitle
 
 \begin{abstract}
+iend{thebibliography}
+
     The motivation for the study of algebraic geometry is how algebraic objects (rings of rational functions) are associated with varieties (zeros of polynomials). This subject florished during the second half of the twentieth century. Algebraic geometry allows us to study the geometry arising from algebraic objects. Core to the deeper understanding of this subject is an understanding of the subject of commutative algebra which studies commutative rings and their ideals and modules. The purpose of the present project is to gain an understanding of commutative algebra through solving exercises from Atiyah-MacDonald's book, Introduction to Commutative Algebra. The reading project comprised of the study of the theory of rings and modules, their tensor product and exact sequences of rings and modules. The project concluded with a proof of the Going-Up Theorem.
 
 \end{abstract}
 
+\tableofcontents
+\newpage
+
 \chapter{What is Algebraic Geometry?}
 
-Algebraic Geometry is the study of curves. Specifically the study of the solution set of polynomial cuves which are called \textit{varieties}. For example a major branch of algebraic geometry is concerned with the study of special curves called \textif{elliptical curves}. For example, a curve defined by the polynomial equation
+Algebraic Geometry is the study of curves. Specifically the study of the solution set of polynomial cuves which are called \textit{varieties}. For example a major branch of algebraic geometry is concerned with the study of special curves called \textit{elliptical curves}. For example, a curve defined by the polynomial equation
     $$y^2 = x^3+ ax + b$$
 
-Which is one example of a variety, specifically \textif{a projective variety}. 
+Which is one example of a variety, specifically \textit{a projective variety}. 
 
 There are different types of such varieties and algebraic geometry provides a toolbox to study such problems where the solution set of cuves are considered as surfaces and rational functions on such a surfaces form a ring which suprisingly is seen to be, if interpreted correctly, equivalent to the surface which is being described. 
 
-So in modern algebraic geometry to every ring $A$, we associated a set $X$ which is the set of all prime ideals of $A$. We find that this set called $Spec(A)$ or the \textif{spectrum} of the ring, has a topology on it which turns the set into a topological space. 
+So in modern algebraic geometry to every ring $A$, we associated a set $X$ which is the set of all prime ideals of $A$. We find that this set called $Spec(A)$ or the \textit{spectrum} of the ring, has a topology on it which turns the set into a topological space. 
 
 So algebraic geometry uses quite a lot of algebraic machinery. That is it uses a lot of important results from Commutative Algebra. 
+
+\section{Hilbert's Nullstellensatz}
+
+\begin{theorem}
+    (Hilbert's Nullstellensatz). Suppose $\bar{k} = k$. Then, the following statements are both true and equivalent:
+    \begin{enumerate}
+        \item Given an ideal $J\subset \mathbb{A}^n_k$, we have $\sqrt{J} = I(V(J))$,
+        \item Given an ideal $J\subset \mathbb{A}^n_k$, we have the implication $(V(J)) = \varnothing \implies J = \bar{k}[x_1,\cdots,x_n])$,
+        \item The maximal ideals of $k[x_1,\cdots,x_n]$ are exactly $J = (x_1-a,\cdots, x_n-a_n), (a_1,\cdots,a_n)\in k^n$, with $\bar{k}[x_1,\cdots,x_n]/J \cong \bar{k}$
+    \end{enumerate}
+\end{theorem}
+
 
 % The statement of the theorems and proofs go here. Focus most effort here.
 \chapter{Rings and Ideals}
@@ -850,22 +870,6 @@ We show that integral dependence is preserved on passing to quotients and to rin
     (Going-up theorem)** Let $A\subseteq B$ be rings, B integral over A; let $\mathfrak{p_1 \subseteq \cdots \subseteq p_n}$ be a chain of prime ideals of A and $\mathfrak{q\subseteq \cdots \subseteq q_m} (m < n )$ a chain of prime ideals of B such that $\mathfrak{q_i}\cap A = \mathfrak{p_i} (1\leq i\leq m)$. Then the chain $\mathfrak{q_1\subset \cdots \subseteq q_m}$ can be extended to a chain $\mathfrak{q_1 \subseteq \cdots \subseteq q_n}$ such that $\mathfrak{q_i}\cap A = \mathfrak{p_i}$ for $1\leq i \leq n$.
 \end{theorem}
 
-\chapter{Hilbert's Nullstellensatz}
-\section{The Nullstellensatz}
 
-\begin{theorem}
-    (Hilbert's Nullstellensatz). Suppose $\bar{k} = k$. Then, the following statements are both true and equivalent:
-    \begin{enumerate}
-        \item Given an ideal $J\subset \mathbb{A}^n_k$, we have $\sqrt{J} = I(V(J))$,
-        \item Given an ideal $J\subset \mathbb{A}^n_k$, we have the implication $(V(J)) = \varnothing \implies J = \bar{k}[x_1,\cdots,x_n])$,
-        \item The maximal ideals of $k[x_1,\cdots,x_n]$ are exactly $J = (x_1-a,\cdots, x_n-a_n), (a_1,\cdots,a_n)\in k^n$, with $\bar{k}[x_1,\cdots,x_n]/J \cong \bar{k}$
-    \end{enumerate}
-\end{theorem}
-
-
-
-\begin{thebibliography}{9}
-    % type bibliography here
-\end{thebibliography}
 
 \end{document}

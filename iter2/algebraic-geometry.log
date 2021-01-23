@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.21)  23 JAN 2021 18:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.21)  23 JAN 2021 20:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**intro-comm-algebra.tex
-(./intro-comm-algebra.tex
+**algebraic-geometry.tex
+(./algebraic-geometry.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06> (/usr/local/texlive/2020basic/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
@@ -683,51 +683,51 @@ File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
 \c@theorem=\count280
 \c@corollary=\count281
-LaTeX Font Info:    Trying to load font information for T1+zgmx on input line 19.
+LaTeX Font Info:    Trying to load font information for T1+zgmx on input line 20.
  (/usr/local/texlive/2020basic/texmf-local/tex/latex/garamondx/t1zgmx.fd
 File: t1zgmx.fd 2012/10/29 Fontinst v1.933 font definitions for T1/zgmx.
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count282
 \l__pdf_internal_box=\box58
-) (./intro-comm-algebra.aux)
-\openout1 = `intro-comm-algebra.aux'.
+) (./algebraic-geometry.aux)
+\openout1 = `algebraic-geometry.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 19.
-LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 20.
+LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 20.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/mathdesign/mdacmr.fd
 File: mdacmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 19.
-LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 19.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 20.
+LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 20.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/mathdesign/mdbcmr.fd
 File: mdbcmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 19.
-LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 19.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 20.
+LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 20.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    ... okay on input line 20.
 
 
-Package mathdesign/mdugm Warning: Package 'amsfonts' shouldn't be used in conjonction with package mdugm, on input line 19.
+Package mathdesign/mdugm Warning: Package 'amsfonts' shouldn't be used in conjonction with package mdugm, on input line 20.
 
 (/usr/local/texlive/2020basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -786,95 +786,78 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Trying to load font information for OT1+mdugm on input line 24.
+LaTeX Font Info:    Trying to load font information for OT1+mdugm on input line 25.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/mathdesign/mdugm/ot1mdugm.fd
 File: ot1mdugm.fd 2013/08/29 Fontinst v1.933 font definitions for OT1/mdugm.
 )
-LaTeX Font Info:    Trying to load font information for OML+mdugm on input line 24.
+LaTeX Font Info:    Trying to load font information for OML+mdugm on input line 25.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/mathdesign/mdugm/omlmdugm.fd
 File: omlmdugm.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdugm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+mdugm on input line 24.
+LaTeX Font Info:    Trying to load font information for OMS+mdugm on input line 25.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/mathdesign/mdugm/omsmdugm.fd
 File: omsmdugm.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdugm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+mdugm on input line 24.
+LaTeX Font Info:    Trying to load font information for OMX+mdugm on input line 25.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/mathdesign/mdugm/omxmdugm.fd
 File: omxmdugm.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdugm.
 )
-LaTeX Font Info:    Trying to load font information for MDA+mdugm on input line 24.
+LaTeX Font Info:    Trying to load font information for MDA+mdugm on input line 25.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/mathdesign/mdugm/mdamdugm.fd
 File: mdamdugm.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdugm.
 )
-LaTeX Font Info:    Trying to load font information for MDB+mdugm on input line 24.
+LaTeX Font Info:    Trying to load font information for MDB+mdugm on input line 25.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/mathdesign/mdugm/mdbmdugm.fd
 File: mdbmdugm.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdugm.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2020basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [1] (./intro-comm-algebra.toc)
+{/usr/local/texlive/2020basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [1] (./algebraic-geometry.toc)
 \tf@toc=\write4
-\openout4 = `intro-comm-algebra.toc'.
+\openout4 = `algebraic-geometry.toc'.
 
  [1
 
 ]
 Chapter 1.
+<img/ell_curv1.png, id=17, 652.4375pt x 403.5075pt>
+File: img/ell_curv1.png Graphic file (type png)
+<use img/ell_curv1.png>
+Package pdftex.def Info: img/ell_curv1.png  used on input line 62.
+(pdftex.def)             Requested size: 361.34999pt x 223.48753pt.
 [2
 
-]
+] [3 <./img/ell_curv1.png>]
 Chapter 2.
-LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 10.35004pt on input line 90.
-LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 7.24503pt on input line 90.
-LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 5.17502pt on input line 90.
-[3
-
-] [4] [5] [6] [7] [8] [9]
-Chapter 3.
-[10
-
-] [11] [12] [13] [14] [15]
-Chapter 4.
-[16
-
-] [17]
-Overfull \hbox (2.32407pt too wide) in paragraph at lines 709--711
-\OML/mdugm/m/it/10 Spec\OT1/mdugm/m/n/10 (\OML/mdugm/m/it/10 A[]\OT1/mdugm/m/n/10 )$ \T1/zgmx/m/it/10 in $\OML/mdugm/m/it/10 Spec\OT1/mdugm/m/n/10 (\OML/mdugm/m/it/10 A\OT1/mdugm/m/n/10 )$ \T1/zgmx/m/it/10 is equal to the in-ter-sec-tion of all the open neigh-bor-hoods of $\U/xmdeuf/m/n/10 p$ \T1/zgmx/m/it/10 in $\OML/mdugm/m/it/10 Spec\OT1/mdugm/m/n/10 (\OML/mdugm/m/it/10 A\OT1/mdugm/m/n/10 )$\T1/zgmx/m/it/10 .
- []
-
-[18] [19] [20]
-Chapter 5.
-[21
+[4
 
 ]
-Overfull \hbox (3.50313pt too wide) in paragraph at lines 870--871
-[]\T1/zgmx/b/n/10 Theorem 5.2.3. []\T1/zgmx/m/it/10 (Going-up the-o-rem)** Let $\OML/mdugm/m/it/10 A \OMS/mdugm/m/n/10 ^^R \OML/mdugm/m/it/10 B$ \T1/zgmx/m/it/10 be rings, B in-te-gral over A; let $[]$
- []
+Chapter 3.
+[5
 
-[22] (./intro-comm-algebra.aux) ) 
+] [6
+
+] (./algebraic-geometry.aux) ) 
 Here is how much of TeX's memory you used:
- 16575 strings out of 482056
- 325472 string characters out of 5937674
- 527747 words of memory out of 5000000
- 31875 multiletter control sequences out of 15000+600000
- 657582 words of font info for 134 fonts, out of 8000000 for 9000
+ 16454 strings out of 482056
+ 322675 string characters out of 5937674
+ 523760 words of memory out of 5000000
+ 31763 multiletter control sequences out of 15000+600000
+ 638824 words of font info for 119 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 67i,15n,84p,893b,1084s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020basic/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}{/usr/local/texlive/2020basic/texmf-local/fonts/enc/dvips/garamondx/zgmt1.enc}</usr/local/texlive/2020basic/texmf-local/fonts/type1/public/garamondx/NewG8-Bol.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/public/garamondx/NewG8-Ita.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/public/garamondx/NewG8-Reg.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/euler/eufm5.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/mathdesign/mdugm/md-gmr7t.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/mathdesign/mdugm/md-gmr7v.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/mathdesign/mdugm/md-gmr7y.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/mathdesign/mdugm/md-gmri7m.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/mathdesign/mdugm/md-gmrma.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/urw/garamond/ugmr8a.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/urw/garamond/ugmri8a.pfb>
-Output written on intro-comm-algebra.pdf (24 pages, 223281 bytes).
+ 67i,6n,84p,893b,283s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020basic/texmf-local/fonts/enc/dvips/garamondx/zgmt1.enc}{/usr/local/texlive/2020basic/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/local/texlive/2020basic/texmf-local/fonts/type1/public/garamondx/NewG8-Bol.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/public/garamondx/NewG8-Ita.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/public/garamondx/NewG8-Reg.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/mathdesign/mdugm/md-gmr7t.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/mathdesign/mdugm/md-gmr7y.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/mathdesign/mdugm/md-gmrma.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/urw/garamond/ugmr8a.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/urw/garamond/ugmri8a.pfb>
+Output written on algebraic-geometry.pdf (8 pages, 127142 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
+ 71 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
