@@ -19,7 +19,12 @@
 
 \begin{document}
 
-\title{Introduction to Commutative Algebra}
+\title{%
+    Introduction to Commutative Algebra: \\
+    
+    \large with a brief introduction to the \\
+    algebraic geometry of affine \\
+    algebraic varieties}
 \author{Amal M}
 \date{January 4, 2021}
 \maketitle
@@ -53,10 +58,19 @@ The solution set or \textit{locus} of solutions of polynomials of degree one are
     $$y^2 = x^3 - 3x + 5$$
     is a curve (Fig 1.). The question then arises: \textit{what does the solution set of a set of polynomials in $k^3$ look like? What about $k^n$?} This is same asking the question: \textit{what does an affine algebraic variety in $A^n_k$ look like?} We may go further by demanding: \textit{what is the topology of the affine algebraic variety?} (The answer is called the \textit{Zariski Topology}, which we shall get to in due time.)
 
-    Once we have an affine algebraic variety we may define functions on them and we may define functions from one algebraic variety to another. That is we start to do the usual mathematical \textit{shtick} on affine varieties.
+    Once we have an affine algebraic variety we may define functions on them and we may define functions from one algebraic variety to another. Thus we start to do the usual mathematical \textit{shtick} on affine varieties.
 
-    To answer the proposed questions we need to know the properties of an affine algebraic varieties. For example: \textit{what is so algebraic about an affine algebraic variety?} The answer is that we may consider every \textit{affine algebraic variety} to be some \textit{finitely generated nilpotent-free $k$-algebra $A$}. To know what each of these terms means we first need some commutative algebra. The purpose of this article is to explain these terms and give a brief introduction to Algebraic Geometry.
+    To answer the proposed questions we need to know the properties of an affine algebraic varieties. For example: \textit{what is so algebraic about an affine algebraic variety?} The answer is that we may consider every \textit{affine algebraic variety} to be some \textit{finitely generated nilpotent-free $k$-algebra $A$}. To know what each of these terms means we first need some commutative algebra. The purpose of this article is to explain these terms and give a brief introduction to Algebraic Geometry focusing only on affine algebraic varieties.
 
+    The exposition is based on the knowledge gained after spending many hours working out the exercises contained in \cite{atiyah1}. I would advise anyone thinking about learning algebraic geometry to start there and work out those exercises themselves.  
+
+    We divide the article into three sections. In the first section we introduce the \textit{prime spectrum} of a ring $A$, $X = \text{Spec}(A)$ by which we denote the set of all prime ideals of $A$. We endow this space $X$ with a topology called \textit{the Zariski Topology}.
+
+    In the next section, we introduce \textit{modules}, which are a sort of generalised vector spaces and \textit{algebras}, which are modules on rings, and we define the tensor product on a collection of such \textit{modules}. Then we discuss a particular sort of structure that can be given to a collection of modules called \textit{the direct limit} -- a term loaned from Category Theory. 
+
+    In the last section we introduce the \textit{rings of fractions} of modules and the concept of \textit{localization} which we use in the formulation of a sort of structure called \textit{presheaf} and \textit{sheaf}. 
+
+    % Start by giving an overview of the table of content
 
 \begin{figure}
   \includegraphics[width=\linewidth]{img/ell_curv1.png}
@@ -64,7 +78,7 @@ The solution set or \textit{locus} of solutions of polynomials of degree one are
   \label{fig:ell_curv1}
 \end{figure}
 
-
+\chapter {The Zariski Topology}
 \section{Prime Spectrum}
 \section{Zariski Topology}
 \section{Irreducible Spaces}
@@ -88,6 +102,10 @@ The solution set or \textit{locus} of solutions of polynomials of degree one are
 \bibitem{vakil145}
     Ravi Vakil,
     \textit{Math 145: Algebraic Geometry}
+
+\bibitem{atiyah1}
+    Atiyah-Macdonald, 
+    \textit{Introduction to Commutative Algebra}
 \end{thebibliography}
 
 \end{document}
