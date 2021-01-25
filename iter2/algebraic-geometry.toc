@@ -1,16 +1,17 @@
 \contentsline {chapter}{\numberline {1}Introduction}{2}%
 \contentsline {chapter}{\numberline {2}The Zariski Topology}{4}%
-\contentsline {section}{\numberline {2.1}Prime Spectrum}{4}%
-\contentsline {section}{\numberline {2.2}Zariski Topology}{4}%
-\contentsline {section}{\numberline {2.3}Irreducible Spaces}{4}%
-\contentsline {section}{\numberline {2.4}Affine Algebraic Varieties}{4}%
-\contentsline {chapter}{\numberline {3}Tensor Product and Direct Limits}{5}%
-\contentsline {section}{\numberline {3.1}Tensor Product}{5}%
-\contentsline {section}{\numberline {3.2}Flatness}{5}%
-\contentsline {section}{\numberline {3.3}Direct Limit}{5}%
-\contentsline {chapter}{\numberline {4}Sheaf and Presheaf}{6}%
-\contentsline {section}{\numberline {4.1}Support}{6}%
-\contentsline {section}{\numberline {4.2}Presheaf}{6}%
-\contentsline {section}{\numberline {4.3}Sheaf}{6}%
-\contentsline {section}{\numberline {4.4}Constructible Topology}{6}%
-\contentsline {section}{\numberline {4.5}Absolute Flatness}{6}%
+\contentsline {section}{\numberline {2.1}Prime Spectrum}{5}%
+\contentsline {section}{\numberline {2.2}Zariski Topology}{5}%
+\contentsline {section}{\numberline {2.3}Irreducible Spaces}{5}%
+\contentsline {section}{\numberline {2.4}Affine Algebraic Varieties}{5}%
+\contentsline {chapter}{\numberline {3}Tensor Product and Direct Limits}{6}%
+\contentsline {section}{\numberline {3.1}Tensor Product}{6}%
+\contentsline {section}{\numberline {3.2}Flatness}{6}%
+\contentsline {section}{\numberline {3.3}Direct Limit}{6}%
+\contentsline {chapter}{\numberline {4}Sheaf and Presheaf}{7}%
+\contentsline {section}{\numberline {4.1}Support}{7}%
+\contentsline {section}{\numberline {4.2}Presheaf}{7}%
+\contentsline {section}{\numberline {4.3}Sheaf}{7}%
+\contentsline {section}{\numberline {4.4}Constructible Topology}{7}%
+\contentsline {section}{\numberline {4.5}Absolute Flatness}{7}%
+\contentsline {chapter}{\numberline {5}The Going-Up Theorem}{8}%

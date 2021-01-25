@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.21)  23 JAN 2021 20:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.21)  25 JAN 2021 08:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -683,7 +683,7 @@ File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
 \c@theorem=\count280
 \c@corollary=\count281
-LaTeX Font Info:    Trying to load font information for T1+zgmx on input line 20.
+LaTeX Font Info:    Trying to load font information for T1+zgmx on input line 22.
  (/usr/local/texlive/2020basic/texmf-local/tex/latex/garamondx/t1zgmx.fd
 File: t1zgmx.fd 2012/10/29 Fontinst v1.933 font definitions for T1/zgmx.
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
@@ -693,41 +693,41 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 ) (./algebraic-geometry.aux)
 \openout1 = `algebraic-geometry.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 20.
-LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 22.
+LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 22.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/mathdesign/mdacmr.fd
 File: mdacmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 20.
-LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 20.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 22.
+LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 22.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/mathdesign/mdbcmr.fd
 File: mdbcmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 20.
-LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 20.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 22.
+LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 22.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    ... okay on input line 22.
 
 
-Package mathdesign/mdugm Warning: Package 'amsfonts' shouldn't be used in conjonction with package mdugm, on input line 20.
+Package mathdesign/mdugm Warning: Package 'amsfonts' shouldn't be used in conjonction with package mdugm, on input line 22.
 
 (/usr/local/texlive/2020basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -830,39 +830,49 @@ Chapter 1.
 [2
 
 ]
-<img/ell_curv1.png, id=26, 652.4375pt x 403.5075pt>
+<img/ell_curv1.png, id=26, 462.528pt x 346.896pt>
 File: img/ell_curv1.png Graphic file (type png)
 <use img/ell_curv1.png>
-Package pdftex.def Info: img/ell_curv1.png  used on input line 76.
-(pdftex.def)             Requested size: 361.34999pt x 223.48753pt.
+Package pdftex.def Info: img/ell_curv1.png  used on input line 78.
+(pdftex.def)             Requested size: 361.34999pt x 271.0277pt.
  [3 <./img/ell_curv1.png>]
 Chapter 2.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 10.35004pt on input line 94.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 7.24503pt on input line 94.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 5.17502pt on input line 94.
 [4
 
-]
+] [5]
 Chapter 3.
-[5
+[6
 
 ]
 Chapter 4.
-[6
+[7
 
-] [7
+]
+Chapter 5.
+[8
+
+] [9
 
 ] (./algebraic-geometry.aux) ) 
 Here is how much of TeX's memory you used:
- 16457 strings out of 482056
- 322710 string characters out of 5937674
- 523763 words of memory out of 5000000
- 31766 multiletter control sequences out of 15000+600000
- 649012 words of font info for 121 fonts, out of 8000000 for 9000
+ 16467 strings out of 482056
+ 322797 string characters out of 5937674
+ 523778 words of memory out of 5000000
+ 31772 multiletter control sequences out of 15000+600000
+ 650020 words of font info for 125 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  67i,6n,84p,893b,281s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020basic/texmf-local/fonts/enc/dvips/garamondx/swashQ.enc}{/usr/local/texlive/2020basic/texmf-local/fonts/enc/dvips/garamondx/zgmt1.enc}{/usr/local/texlive/2020basic/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/local/texlive/2020basic/texmf-local/fonts/type1/public/garamondx/NewG8-Bol.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/public/garamondx/NewG8-Ita.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/public/garamondx/NewG8-Reg.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/mathdesign/mdugm/md-gmr7t.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/mathdesign/mdugm/md-gmr7y.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/mathdesign/mdugm/md-gmrma.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/urw/garamond/ugmr8a.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/urw/garamond/ugmri8a.pfb>
-Output written on algebraic-geometry.pdf (9 pages, 130422 bytes).
+{/usr/local/texlive/2020basic/texmf-local/fonts/enc/dvips/garamondx/swashQ.enc}{/usr/local/texlive/2020basic/texmf-local/fonts/enc/dvips/garamondx/zgmt1.enc}{/usr/local/texlive/2020basic/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/local/texlive/2020basic/texmf-local/fonts/type1/public/garamondx/NewG8-Bol.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/public/garamondx/NewG8-Ita.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/public/garamondx/NewG8-Reg.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/mathdesign/mdugm/md-gmr7t.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/mathdesign/mdugm/md-gmr7y.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/mathdesign/mdugm/md-gmri7m.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/mathdesign/mdugm/md-gmrma.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/urw/garamond/ugmr8a.pfb></usr/local/texlive/2020basic/texmf-local/fonts/type1/urw/garamond/ugmri8a.pfb>
+Output written on algebraic-geometry.pdf (11 pages, 148879 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 91 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
