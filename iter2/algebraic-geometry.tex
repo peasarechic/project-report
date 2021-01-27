@@ -4,9 +4,11 @@
 \usepackage[urw-garamond]{mathdesign}
 \usepackage{garamondx}
 \usepackage{amsmath, amsthm, amsfonts}
-\usepackage[a4paper, total={5in, 8in}]{geometry}
+\usepackage[a4paper, total={4in, 8in}]{geometry}
 \usepackage{tikz-cd} % used to draw commutative diagrams
 \usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{mathtools}
 
 % user defined commands go here
 \newtheorem{theorem}{Theorem}[section]
@@ -18,6 +20,10 @@
 \newtheorem{exercise}[theorem]{Exercise}
 
 \DeclareMathOperator\Spec{Spec}
+\DeclareMathOperator\Max{Max}
+\DeclareMathOperator\Ker{Ker}
+\DeclareMathOperator\Coker{Coker}
+\renewcommand{\qedsymbol}{$\blacksquare$}
 
 \begin{document}
 
@@ -124,17 +130,165 @@ The \textit{nilradical} of a ring $A$ has the property that it is equal to the i
     $x\in \mathfrak{R} \Leftrightarrow 1-xy$ is a unit in A for all $y\in A$. \cite{atiyah1}
 \end{prop}
 
-
-
 \section{Prime Spectrum}
-\section{Zariski Topology}
-\section{Irreducible Spaces}
+
+The \textit{prime spectrum} of a ring is the set of all \textit{prime} ideals of the ring $A$ and we denote it by $X = \Spec(A)$. We consider this set to be a space in the following way. Each \textit{prime ideal} $\mathfrak{p}_x \in \Spec(A)$ is a point which we denot by $x$.
+
+A topology on a space can be axiomatically defined using just the closed sets. We claim that for each subset $E$ of $A$
+    $$V(E) = \{\mathfrak{p}\in \Spec(A): E\subseteq \mathfrak{p}\}$$
+    satisfies the axioms for closed sets. To see this by Ex 15.ii $V(0) = X$ and $V(1) = \varnothing$. By 15.iii arbitary intersection of closed sets are seen to be closed. By 15.iv along with 15.i we can see that union of finitely many closed sets is closed. So the sets $V(E)$ do indeed form a topology on $\Spec(A)$. This topology is called \textit{the Zariski Topology}.
+
+    This is not the only topology on $\Spec(A)$ we will discuss another such topology, the \textit{constructible topology}, later on. But for now we focus on the properties of the \textit{Zariski Topology}.
+
+    The sets $X_f = X - V(f)$ are open sets in $X$ for each $f\in A$ since each $V(f)$ is closed. The family of such sets, $\{X_f\}_{f\in A}$ is the basis (Ex 17) of the \textit{Zariski Topology} and we call them the \textit{basic open sets} of $X$.
+
+    $X$ is \textit{quasi-compact}. Which is exactly the same as \textit{compactness} in regular topology. For some reason Algebraic Geometers do not use the term \textit{compactness} to mean just the condition \textit{every open cover has a finite subcover}. But instead a space is \textit{compact} if it is also Hausdorff as well as \textit{quasi-compact}. This is because every $\Spec(A)$ has the usual property of having a finite subcover for an open covering. So just calling it \textit{compact} is a waste of a perfectly good word that can be used for something more significant. 
+
+    We find that every open set $X_f$ is quasi-compact as well every finite union of sets $X_f$. Indeed we have that a subset of $X$ is quasi-compact if and only if it is a union of finitely many open sets $X_f$ (Ex 17.vii).
+
+    A singleton set $\{x\}$ in the Zariski Topology is closed if and only if $\mathfrak{p}_x$ is maximal (Ex 18.i). $X$ is also $T_0$-space.
+
+    Now would be a good time to see some examples of the \textit{prime spectrum} of some well known rings such as $\mathbb{Z, R, C}[x]$ and $\mathbb{Z}[x]$ (Ex 16).
+
+
+
+\section{Maximal Spectrum}
+
+The \textit{maximal spectrum} of a ring is the set of all \textit{maximal} ideals of the ring. It is denoted by $\Max(A)$. The \textit{maximal spectrum} is a subset of the \textit{prime spectrum} $\Spec(A)$. We can quickly give a concrete example for a \textit{maximal spectrum}.
+
+Let $X$ be a compact Hausdorff space and let $C(X)$ be the ring of all real valued continuous functions on $X$. Define
+$$\mathfrak{m}_x = \{f\in C(X): f(x) = 0\}$$
+Then $\mathfrak{m}_x$ is an ideal and furthermore it is a maximal ideal since if we define a function $\phi_x: C(X) \rightarrow \mathbb{R}$ as the mapping $f\mapsto f(x)$ then the kernel of the map is $\mathfrak{m}_x$. 
+
+Let $\hat{X} = \Max(A)$ we can define a mapping $\mu: X\rightarrow \hat{X}$ by $x\mapsto \mathfrak{m}_x $. By Ex 26.i $\mu$ is surjective and by Ex 26.ii it is injective. Let $f\in C(X)$ and define
+$$U_f = \{x\in X:f(x) = 0\}$$
+$$\hat{U}_f = \{\mathfrak{m}\in \hat{X}:f\not\in \mathfrak{m}\}$$
+We can show that $\mu(U_f) = \hat{U}_f$ (Ex 27.iii). So $\mu$ sends the basis of $X$ the basis of $\hat{X}$ and so $\mu$ is a homeomorphism.
+
+We have just show that given only the functions on a compact Hausdorff space $X$ we can reconstruct the underlying space.
+
 \section{Affine Algebraic Varieties}
+
+Given a set $S$ of polynomial in $k[x_1,\cdots,x_n]$ we have defined the \textit{affine algebraic variety} on $S$ as the subset $V(S)$ of the affine space $\mathbb{A}^n_k$.
+$$V(S) = \{x = (x_1,\cdots,x_n) \in \mathbb{A}^n_k : f(x) = 0 \text{ for all } f \in S\}.$$
+Now we consider the opposite behavior? 
+
+Given a subset $X$ of the affine space we define the \textit{ideal of the variety} $X$ to be the set of polynomials $g\in k[x_1,\cdots,x_n]$ that vanish on $X$. It is denoted by $I(X)$.
+$$I(X) = \{g\in k[x_1,\cdots,x_n]: g(x) = 0, \forall x\in X\}$$
+This set is an ideal since if two polynomials $f,g\in I(X)$ then $f+g\in I(X)$ as the sum of the polynomials vanish if they each individually vanish and for any polynomial $f \in k[x_1,\cdots, x_n]$ and $g\in I(X)$, $fg = 0$ so $fg\in I(X)$ as well.
+
+    The quotient ring
+    $$P(X) = k[x_1,\cdots,x_n]/I(X)$$
+    is called the ring of polynomial functions on $X$. If two polynomials $f$ and $g$ belong to the same coset, then $f-g \in I(X)$ that means over $X$, $(f-g)(x) = 0$, i.e., the two polynomials agree in value over $X$. So the polynomial ring contains only distinct polynomials over $X$.
+
+    Let $\xi_i$ be the image in $P(X)$ of $x_i$. Then the $x_i (1\leq i\leq n)$ are called the \textit{coordinate functions} on $X$. $P(X)$ is generated as a $k$-algebra by the \textit{coordinate functions} and it is called the \textit{coordinate ring} or \textit{affine algebra} on $X$.
+
+    For each $x\in X$ the ideal $\mathfrak{m}_x$ consiting of $f\in P(X)$ such that $f(x) = 0$ is a maximal ideal. Let $\hat{X} = \Max(P(X))$. We can use Hilbert's Nullstellensatz to show that the mapping $\mu: X \rightarrow \hat{X}$ given by $x\mapsto \mathfrak{m}_x$ is a bijection.
+
+\subsection{Polynomial Functions}
+
+Let $f_1,\cdots, f_m$ be $m$ polynomials in $k[x_1,\cdots,x_n]$. We can define a mapping $\phi: k^n\rightarrow k^m$ by $\phi(x) = (f_1(x),\cdots,f_m(x))$. Such a mapping is called a \textit{polynomial mapping}.
+
+    Let $X,Y$ be affine algebraic varieties in $k^n$ and $k^m$ respectively. A mapping $\phi: Y\rightarrow X$ is a \textit{regular} mapping if $\phi$ is a restriction of a polynomial mapping from $k^n$ to $k^m$.
+
+    $\phi$ induces a $k$-algebra homomorphim $P(Y) \rightarrow P(X)$ given by sending polynomial functions on $Y$ to their composition with $\phi$. Therefore there is a one-to-one correspondence between the regular mappings $X\rightarrow Y$ and the $k$-algebra homomorphim $P(Y) \rightarrow P(X)$.
 
 
 \chapter{Tensor Product and Direct Limits}
+
+Let $A$ be a ring. An $A$-\textit{module} is an abelian group $M$ along with a mapping $\mu: A\times M\rightarrow M$, $\mu(a,x)$ denoted by $ax, a\in A, x\in M$ which satisfies the following
+\begin{enumerate}
+    \item $a(x+y) = ax + ay$
+    \item $(a+b)x = ax + bx$
+    \item $(ab)x = a(bx)$
+    \item $1x = x$, 
+ ($\forall a,b \in A, \forall x,y \in M$.)
+\end{enumerate}
+
+A \text{module homomorphism} between two modules $M$ and $N$ is an $A$-linear mapping between two abelian groups $f:M\rightarrow N$, such that the following two properties are satisfied
+\begin{enumerate}
+    \item $f(x+y) = f(x) + f(y)$
+    \item $f(a.x) = a.f(x)$
+\end{enumerate}
+
+A \textit{submodule} $M'$ of $M$ is a subgroup that is closed under multiplication by elements of $A$. The quotient $M/M'$ is also an A-module as it is the action of $A$ on the quotient is $a(x + M') = ax + M'$.
+
+Given two modules $M$ and $N$, their direct product is given as the module $M\oplus N$ which is the set of all elements $(x,y), x\in M, y\in N$ with two operations defined on it
+$$(x_1,y_1) + (x_2,y_2) = (x_1+x_2, y_1+y_2)$$
+$$a(x,y) = (ax, ay)$$
+
+Given an arbitary family of $A$-modules, $(M_i)_{i\in I}$ the direct sum of the family is the sum $\bigoplus_{i\in I} M_i$ is the set of all families $(x_i)_{i\in I}$, $x_i\in M_i$ such that all but finitely many $x_i$ are nonzero. It is a module by the same operation as above. 
+
+A sequence of $A$-modules and $A$-homomorphisms,
+$$\cdots \rightarrow M_{i-1} \xrightarrow{f_i} M_i \xrightarrow{f_{i+1}} M_{i+1} \rightarrow \cdots$$ 
+is said to be \textit{exact} at $M_i$ if, $\Ker(f_{i+1}) = \text{Im}{f_i}$. The sequence is exact if it is exact at each $M_i$. 
+
+\begin{enumerate}
+    \item $0 \rightarrow M' \xrightarrow{f} M$ is exact $\Leftrightarrow$ $f$ is injective.
+    \item $M \xrightarrow{g} M'' \rightarrow 0$ is exact $\Leftrightarrow$ $g$ is surjective. 
+    \item $0 \rightarrow M' \xrightarrow{f} M \xrightarrow{g} M'' \rightarrow 0$ is exact $\Leftrightarrow$ $f$ is injective and $g$ is surjective. But also $\Coker(f) = M/f(M')$ is isomorphic to $M''$. This type of exact sequence is also called a short exact sequence. 
+\end{enumerate}
+
+A sequence of type (3) is called a \textit{short exact sequence}.
+
 \section{Tensor Product}
+
+The \textit{tensor product} of two $A$-modules $M$ and $N$ is the $A$-module $M\otimes N$ of all linear combination of the pair $x \otimes y$ with coefficients in $A$ along with the following properties,
+\begin{enumerate}
+    \item $(x + x') \otimes y = x \otimes y + x' \otimes y$
+    \item $x \otimes (y + y') = x \otimes y + x \otimes y'$
+    \item $a.x \otimes y = x \otimes a.y = a(x \otimes y)$
+\end{enumerate}
+
+We see that $0 \otimes x = x\otimes 0 = 0$ as $0.(a\otimes x) = 0$. If $x_i$ generates M and $y_i$ generates N then $x_i \otimes y_i$ generates $M\otimes N$. 
+
+Let $x\in M$ and $y\in N$ if $M' \subseteq M$ and $N'\subseteq N$ are submodules then $x\otimes y \in M\otimes N$ is not the same as $x\otimes y \in M'\otimes N'$ 
+
+To be specific the tensor product of A-modules is denoted by $M \otimes_A N$ but if the context is clear we can write $M\otimes N$.
+
+\begin{prop} \cite{atiyah1}
+    Let M,N,P be A-modules. Then there exists unique isomorphisms called the cannonical isomorphisms 
+    \begin{enumerate}
+        \item $M\otimes N \rightarrow N\otimes N$, (given by $x\otimes y \mapsto y\otimes x$)
+        \item $(M\otimes N) \otimes P \rightarrow M\otimes (N\otimes P) \rightarrow M\otimes N\otimes P$, (given by $(x\otimes y) \otimes z \mapsto x \otimes (y\otimes z) \mapsto x\otimes y \otimes z$)
+        \item $(M\oplus N) \otimes P \rightarrow (M\otimes P) \oplus (N\otimes P)$, given by $(x,y)\otimes z \mapsto (x\otimes z, y\otimes z)$
+        \item $A\otimes M \rightarrow M$, given by $a\otimes x \mapsto ax$. 
+    \end{enumerate}
+\end{prop}
+    
 \section{Flatness}
+
+A $A$-module $N$ is called a \textit{flat} module if for every exact sequence
+$$\cdots \rightarrow M_{i-1} \xrightarrow{f_i} M_i \xrightarrow{f_{i+1}} M_{i+1} \rightarrow \cdots$$ 
+when \textit{tensored} (multiplied) by $N$ gives another sequence
+$$\cdots \rightarrow M_{i-1}\otimes N \xrightarrow{f_i} M_i\otimes N \xrightarrow{f_{i+1}} M_{i+1}\otimes N \rightarrow \cdots$$ 
+which is \textit{exact}.
+
+\section{Tensor Product of Algebras}
+
+We now define multiplicaton on the tensor product in the following way so that it turns into a commutative ring with identity element $1\otimes 1$:
+
+Let $B,C$ be two $A$-algebras with associated homomorphims $f:A\rightarrow B$ and $g:A\rightarrow C$. As algebras are themselves modules we take their tensor product $D = B\otimes_A C$. 
+
+Define the multiplicaton $D\otimes D \rightarrow D$ by the A-bilinear mapping $\mu: D\times D \rightarrow D$ so that,
+$$\mu(b\otimes c, b'\otimes c') = bb' \otimes cc'. $$
+
+
+That is, $(b\otimes c)(b'\otimes c') = bb'\otimes cc'$ and more generally, $(\sum_i(b_i\otimes c_i))(\sum_j(b'_j\otimes c'_j)) = \sum_{i,j}(b_i b'_j \otimes c_i c'_j)$
+\begin{enumerate}
+    \item The mapping $a\mapsto f(a)\otimes g(a)$ is a ring homomorphism $A\rightarrow D$. 
+    \item There is a commutative diagram of ring homomorphisms, 
+\end{enumerate}
+
+\begin{equation*}
+    \begin{tikzcd}
+                                  & B \arrow[rd, "u"] &   \\
+        A \arrow[ru, "f"] \arrow[rd, "g"] &                   & D \\
+                                  & C \arrow[ru, "v"] &  
+    \end{tikzcd}
+\end{equation*}
+
+
 \section{Direct Limit}
 
 \chapter{Sheaf and Presheaf}
@@ -155,6 +309,10 @@ The \textit{nilradical} of a ring $A$ has the property that it is equal to the i
 \bibitem{atiyah1}
     Atiyah-Macdonald, 
     \textit{Introduction to Commutative Algebra}
+
+\bibitem{treasuremap}
+    Mumford's Treasure Map,
+    \href{https://web.archive.org/web/20201130150255/http://www.neverendingbooks.org/mumfords-treasure-map}{\textit{Mumford's Treasure Map}}
 \end{thebibliography}
 
 \end{document}
