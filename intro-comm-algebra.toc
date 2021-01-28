@@ -1,0 +1,28 @@
+\contentsline {chapter}{\numberline {1}What is Algebraic Geometry?}{2}%
+\contentsline {section}{\numberline {1.1}Hilbert's Nullstellensatz}{2}%
+\contentsline {chapter}{\numberline {2}Rings and Ideals}{3}%
+\contentsline {section}{\numberline {2.1}Basic Definitions}{3}%
+\contentsline {section}{\numberline {2.2}Ideals and Quotients}{3}%
+\contentsline {section}{\numberline {2.3}Zero-Divisors, Nilpotent Elements, Units}{4}%
+\contentsline {section}{\numberline {2.4}Prime and Maximal Ideals}{4}%
+\contentsline {section}{\numberline {2.5}Nilradical and Jacobson Radical}{5}%
+\contentsline {section}{\numberline {2.6}Some properties of ideals}{5}%
+\contentsline {chapter}{\numberline {3}Modules}{10}%
+\contentsline {section}{\numberline {3.1}Modules and Module homomorphisms}{10}%
+\contentsline {section}{\numberline {3.2}Submodules and Quotient Modules}{10}%
+\contentsline {subsection}{\numberline {3.2.1}Some important notes}{11}%
+\contentsline {section}{\numberline {3.3}Direct Sum and Product}{11}%
+\contentsline {section}{\numberline {3.4}Finitely Generated Module}{11}%
+\contentsline {subsection}{\numberline {3.4.1}Free Module}{12}%
+\contentsline {section}{\numberline {3.5}Exact Sequence}{12}%
+\contentsline {section}{\numberline {3.6}Tensor Product of Modules}{13}%
+\contentsline {section}{\numberline {3.7} Restriction and extension of scalars}{13}%
+\contentsline {section}{\numberline {3.8}Exactness Properties of the Tensor Product}{14}%
+\contentsline {chapter}{\numberline {4}Rings and Modules of Fractions}{16}%
+\contentsline {section}{\numberline {4.1}Ring of Fractions}{16}%
+\contentsline {section}{\numberline {4.2}Localization}{16}%
+\contentsline {section}{\numberline {4.3}Ring of fraction of Modules}{17}%
+\contentsline {section}{\numberline {4.4}Some examples of local properties}{18}%
+\contentsline {chapter}{\numberline {5}Integral Dependence and the Going-Up Theorem}{21}%
+\contentsline {section}{\numberline {5.1}Integral Dependence}{21}%
+\contentsline {section}{\numberline {5.2}The Going-up Theorem}{22}%
