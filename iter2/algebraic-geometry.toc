@@ -9,10 +9,10 @@
 \contentsline {section}{\numberline {3.2}Flatness}{11}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Tensor Product of Algebras}{11}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Direct Limit}{11}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Sheaf and Presheaf}{12}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Support}{12}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Presheaf}{12}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Sheaf}{12}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Constructible Topology}{12}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Absolute Flatness}{12}{section.4.5}%
-\contentsline {chapter}{\numberline {5}The Going-Up Theorem}{13}{chapter.5}%
+\contentsline {chapter}{\numberline {4}Sheaf and Presheaf}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Support}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Presheaf}{13}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Sheaf}{13}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Constructible Topology}{13}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Absolute Flatness}{13}{section.4.5}%
+\contentsline {chapter}{\numberline {5}The Going-Up Theorem}{14}{chapter.5}%

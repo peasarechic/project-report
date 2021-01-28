@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1611760546 "algebraic-geometry.tex" "algebraic-geometry.pdf" "algebraic-geometry" 1611760547
+["pdflatex"] 1611810164 "algebraic-geometry.tex" "algebraic-geometry.pdf" "algebraic-geometry" 1611810166
   "/usr/local/texlive/2020basic/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc" 1276641224 6938 5135be6a8802f13a7faf296d1959a1ab ""
   "/usr/local/texlive/2020basic/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
   "/usr/local/texlive/2020basic/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm" 1246382020 1040 b84415f97d114011685943ade933dc71 ""
@@ -211,14 +211,14 @@
   "/usr/local/texlive/2020basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1611404668 505889 530609b33775a311b989a4fbcb95733d ""
   "/usr/local/texlive/2020basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1608523190 1835988 aa250eb8ee0431ac325137c58f371c4d ""
   "/usr/local/texlive/2020basic/texmf.cnf" 1586277716 628 4346f9a816ba8e5dc36d93d5100b369e ""
-  "algebraic-geometry.aux" 1611760547 3499 866c166b43f5d0870aaf959259c7b4e8 "pdflatex"
-  "algebraic-geometry.out" 1611760547 1086 fd397e949bb4b38a6a23fa19ab3bbf73 "pdflatex"
-  "algebraic-geometry.tex" 1611760545 23031 874cccb55b94b0fb09d16bb5acae5027 ""
-  "algebraic-geometry.toc" 1611760547 1378 1b9e0c0a72657f1c60cca54c36fe8b9c "pdflatex"
+  "algebraic-geometry.aux" 1611810165 3499 4050438b67d3ae8710c8f488bed99042 "pdflatex"
+  "algebraic-geometry.out" 1611810165 1086 fd397e949bb4b38a6a23fa19ab3bbf73 "pdflatex"
+  "algebraic-geometry.tex" 1611810163 24868 05b63f822712d32fc84128cd8b1580c7 ""
+  "algebraic-geometry.toc" 1611810165 1378 4ed9a4971ef9d060a5e1117c4217b1b4 "pdflatex"
   "img/ell_curv1.png" 1611537453 16322 7edd7d5d3bf5a0ecce398a3f69310243 ""
   (generated)
-  "algebraic-geometry.aux"
-  "algebraic-geometry.pdf"
-  "algebraic-geometry.log"
   "algebraic-geometry.out"
+  "algebraic-geometry.pdf"
   "algebraic-geometry.toc"
+  "algebraic-geometry.aux"
+  "algebraic-geometry.log"
