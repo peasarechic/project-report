@@ -332,13 +332,93 @@ If $S$ is a \textit{multiplicatively closed} subset of $A$ we can form a new rin
     $$(m,s) \equiv (m', s') \Leftrightarrow \exists t \in S \text{ such that } t(sm' - s'm) = 0.$$
 $\byS M$ is an $\byS A$-module
 
-\section{Support}
-\section{Presheaf}
-\section{Sheaf}
+\section{Localization}
+
+\textit{Localization} of a ring $A$ at $\mfk{p}$ where $\mfk{p}$ is a prime ideal of $A$, is the process of taking the ring of fraction $\byS A$ of $A$ given by $S = A - \mfk{p}$ and denoted by $A_\mfk{p}$.
+
+If $\mfk{p}$ is a prime ideal it's easy to see that $S$ is a multiplicatively closed set. Conversely if $S$ is multiplicatively closed and $S - A$ is an ideal then that ideal is prime.
+
+We have the following proposition
+\begin{prop}
+    Let M be an A-module. Then the following are equivalent:
+    \begin{enumerate}
+        \item M = 0
+        \item $M_\mathfrak{p} = 0$ for all prime ideals $\mathfrak{p}$ of A
+        \item $M_\mathfrak{m} = 0$ for all maximal ideals $\mathfrak{m}$ of A
+    \end{enumerate}
+\end{prop}
+
+A property which the ring (or module) $A$ has if and only if each $A_\mfk{p}$ has that same property is called a \textit{local property}. By the proposition above, being identically zero is a \textit{local property}.
+
+Suppose $S = \{f^n\}_{n\geq 0}$. $S$ is multiplicatively closed and the ring of fractions $\byS A$ is denoted in this case by $A_f$.
+
+\section{Sheaf and Presheaf of Rings}
+
+Suppose we have the ring homomorphim $\phi: A \rightarrow \byS A$ given by $a \mapsto a/1$. If we take the associated mapping of the prime spectrum
+    $$\phi^* : \Spec(\byS A) \rightarrow \Spec(A)$$
+    we can show that this mapping is a homeomorphism of $\Spec(\byS A)$ onto it's image in $X = \Spec(A)$. 
+
+    If $f \in A$ and $S = \{f^n\}_{n\geq1}$ then the image of $\Spec(\byS A) = \Spec(A_f)$ is exactly the \textit{basic open set} $X_f$ in $X = \Spec(A)$. So we are justified in introducting the new notation, given $U = X_f$, $A(U) = A_f$.
+
+    If $U = X_f$ and $U' = X_g$ are any two \textit{basic open sets} of $X = \Spec(A)$ we have a homomorphim 
+    $$\rho: A(U) \rightarrow A(U')$$
+    defined in the following way (Ex 23.ii). This homomorphim is called the \textit{restriction} homomorphim.
+
+\begin{defn}
+    A \textit{presheaf of rings} on the basis of open sets $(X_f)_{f \in A}$ is the mapping $A(U) = X_f$ from the open sets to the rings $X_f$ and the \textit{restriction} homomorphim which satsifies the following two conditions
+    \begin{enumerate}
+        \item If $U = U'$ then $\rho$ is the identity map.
+        \item If $U \supseteq U' \supseteq U''$ then the following diagram commutes 
+            \begin{center}
+            \begin{tikzcd}
+                    A(U) \arrow[rr] \arrow[rd] &                  & A(U'') \\
+                           & A(U') \arrow[ru] &       
+            \end{tikzcd}        
+        \end{center}
+    \end{enumerate} 
+
+    The stalk of the presheaf is defined as the direct limit of $A(U)$. In this case the stalk is
+    $$\varinjlim_{x \in U} A(U) \cong A_\mfk{p}.$$
+
+    (Ex 23)
+\end{defn}
+
+What we are doing here is assigning to each open set a ring and then organising the rings using homomorphims between them. A presheaf and sheaf (below) is a method of organising a collection of open sets on a topological space by associating rings with each open set and mappings between them called \textit{restriction} mappings. We need one more condition before we can call a \textit{presheaf} a \textit{sheaf} called \textit{glueability}.
+
+\begin{defn}
+    Given a presheaf as above on a collection of basic open sets $(U_i)_{i \in I}$ which cover $X$, it is called a \textit{sheaf} if it satsifies the following condition. 
+
+For each $i,j \in I$, let the mapping of $s_i \in A(U_i)$ and $s_j \in A(U_j)$ by the restriction mapping into $A(U_i \cap U_j)$ be equal then there exists a unique $s \in A(X)$ whose image in $A(U_i)$ is $s_i$ for all $i \in I$. 
+\end{defn}
+
+% Consider including the abstract defintion of a sheaf here as well. Once they've seen an proper example it's much easier to understand the abstract definition. But often if you get over the abstractness of the definition, that sort of definition is much more clearer and simpler than a concrete example. But this comes at the cost of not really understanding how concept behaves in the wild. 
+
 \section{Constructible Topology}
-\section{Absolute Flatness}
+
+Let $A$ and $B$ be rings with a homomorphim $f: A \rightarrow B$ between them. Associated with this homomorphim is the usual mapping $f^*: \Spec(B) \rightarrow \Spec(A)$ and the subset $f^*(\Spec(B))$ which is the image of $\Spec(B)$ in $X = \Spec(A)$.
+
+We shall now define another topology on $X = \Spec(A)$ by considering all subsets $f^*(\Spec(B))$ in $X$ to be closed for each homomorphim $f: A \rightarrow B$. This topology is called the \textit{constructible topology}. (Ex 27).
+
+For each $f \in A$ the set $X_f$ in $X$ is both open and closed under the \textit{constructible topology}. The \textit{constructible topology} is the smallest topology on $X$ for which all $X_f$ are both open and closed. We can show that the space $X$ is compact, Hausdorff and totally disconnected under the \textit{constructible topology}. (Ex 28)
+
+\begin{prop}
+    The Zariski topology and the constructible topology on $X = \Spec(A)$ are the same if and only if $A/\mfk{N}$ is \textit{absolutely flat}.
+\end{prop}
+
 
 \chapter{The Going-Up Theorem}
+
+Suppose we have a ring $B$ and a subring $A$ such that $A \subseteq B$. Then an element $x \in B$ is called \textit{integral} over the subring $A$ if it is the root of a monic polynomial $p(t) = t^n + a_{n-1}t^{n-1} + \cdots + a_0$ with coefficients in the ring $A$.
+
+The set of elements in $B$ that are \textit{integral} over $A$ form a subring $C$ of $B$ called the \textit{integral closure} of $A$ in $B$.
+
+\begin{theorem}
+    Let $A\subseteq B$ be rings, B integral over A, and let $\mathfrak{p}$ be a prime ideal of A, Then there exists a prime ideal $\mathfrak{q}$ of B such that $\mathfrak{q}\cap A = \mathfrak{p}$. 
+\end{theorem}
+
+\begin{theorem}
+    \textbf{(Going-up theorem)} Let $A \subseteq B$ be rings, B integral over A; let $\mathfrak{p_1 \subseteq \cdots \subseteq p_n}$ be a chain of prime ideals of A and $\mathfrak{q \subseteq \cdots \subseteq q_m} (m < n )$ a chain of prime ideals of B such that $\mathfrak{q_i} \cap A = \mathfrak{p_i} (1 \leq i \leq m)$. Then the chain $\mathfrak{q_1 \subset \cdots \subseteq q_m}$ can be extended to a chain $\mathfrak{q_1 \subseteq \cdots \subseteq q_n}$ such that $\mathfrak{q_i} \cap A = \mathfrak{p_i}$ for $1 \leq i \leq n$.
+\end{theorem}
 
 \begin{thebibliography}{9}
 
