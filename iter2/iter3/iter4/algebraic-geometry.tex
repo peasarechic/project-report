@@ -501,17 +501,81 @@ Suppose $S = \{f^n\}_{n\geq 0}$. $S$ is multiplicatively closed and the ring of 
 
 \section{Sheaf and Presheaf of Rings}
 
+\begin{defn}
+    Given an open set $U$ on a topological space $X$, the \textit{presheaf of rings}, $F$ on $X$ is defined as the following data
+\begin{enumerate}
+    \item To each open set $U$, a ring $F(U)$ is associated. The elements $f \in F(U)$ are called the \text{sections} of $F$ over $U$. The ring $F(X)$ is called a ring of \textit{global section}.  
+    \item Let $U$ and $V$ be two open subsets of $X$ such that $V \subseteq U$. The ring homomorphim $\text{res}_{V,U}: F(U) \rightarrow F(V)$ associated with this mapping is called the \textit{restriction homomorphim}. If $f \in F(U)$ is a section, then $\text{res}_{V,U}(f)$ is called the restriction of $f$ and is denoted by $f|_{V}$.
+    \end{enumerate}
+
+Additionally, the restriction homomorphim must sastisfy the following conditions
+\begin{enumerate}
+    \item For each open set $U$ of $X$, the restriction homomorphim $\text{res}_{U,U}: F(U) \rightarrow F(U)$ is the identity homomorphim.
+    \item If we have $W \subseteq V \subseteq U$ for three open sets, then $\text{res}_{W,V} \circ \text{res}_{V,U} = \text{res}_{W,U}$. That is we have the commutative diagram
+
+\end{enumerate}
+\end{defn}
+
+Suppose we arrange all the open subsets of $X$ in to a set. If we think of each inclusion $V \subseteq U$ of open sets in our set as a function or technically speaking a \textit{morphism} $V \rightarrow U$ then to our original collection of open subsets we may associate function. Such a collection is called a \textit{Category}. In this example since the elements of the sets are open sets we say that this category is the category of open set with morphisms given by inclusion.
+
+On the other hand consider another collection of all rings with morphisms $A \rightarrow B$ between two rings that are just ring homomorphims. This is another \textit{category}, the category of rings, while preserving morphisms. That is $F$ takes the mapping $V \rightarrow U$ in the category of open sets given by inclusion to the mapping $F(U) \rightarrow F(V)$ given by the \textit{restriction homomorphim} in the category of rings.
+
+In the language of \textit{Category Theory}, the \textit{presheaf} $F$ is a \textit{functor}, that is a function that takes each element $U$ in the category of open sets to an element $F(U)$ in the category of rings.
+
+\begin{defn}
+    Let  $U_i$ be a collection of open sets which cover the open set $U$. A presheaf $F$ is called a sheaf if given a collection of sections $f_i \in F(U_i)$ which satisfy  
+    $$f_i |_{U_i \cap U_j} = f_j |_{U_i \cap U_j}, \forall i,j$$
+   there exists a unique $f \in F(U)$ such that $f|_{U_i} = f_i$.
+\end{defn}
+
+
+
+\subsection{A Concrete Example}
+
+Now we shall construct an example of a \textit{sheaf of rings} to illuminate the abstract definition of a \textit{sheaf} we have seen so far.
+
 Suppose we have the ring homomorphim $\phi: A \rightarrow \byS A$ given by $a \mapsto a/1$. If we take the associated mapping of the prime spectrum
     $$\phi^* : \Spec(\byS A) \rightarrow \Spec(A)$$
     we can show that this mapping is a homeomorphism of $\Spec(\byS A)$ onto it's image in $X = \Spec(A)$. 
 
-    If $f \in A$ and $S = \{f^n\}_{n\geq1}$ then the image of $\Spec(\byS A) = \Spec(A_f)$ is exactly the \textit{basic open set} $X_f$ in $X = \Spec(A)$. So we are justified in introducting the new notation, given $U = X_f$, $A(U) = A_f$.
+\begin{prop}
+Let $A$ be a ring and $f: A \rightarrow \byS A$ be the cannonical homomorphim $a \mapsto a/1$. Under this homomorphim the prime ideals $\mathfrak{p}$ of $A$ which do not meet $S$ in $A$ are in one-to-one correspondence with the prime ideals $\byS \mathfrak{p}$ of $\byS A$. That is $\mathfrak{p} \leftrightarrow \byS \mathfrak{p}$.
+\end{prop}
 
-    If $U = X_f$ and $U' = X_g$ are any two \textit{basic open sets} of $X = \Spec(A)$ we have a homomorphim 
-    $$\rho: A(U) \rightarrow A(U')$$
-    defined in the following way (Ex 23.ii). This homomorphim is called the \textit{restriction} homomorphim.
+
+If $f \in A$ and $S = \{f^n\}_{n\geq1}$ then the image of $\Spec(\byS A) = \Spec(A_f)$ is exactly the \textit{basic open set} $X_f$ in $X = \Spec(A)$.
+
+\begin{proof}
+    By the proposition above, the prime ideals $\byS \mathfrak{p}$ in 
+$\byS A = A_f$ are in 1-1 correspondence with the prime ideal of $\mathfrak{p}$ in the ring $A$ that does not meet $S = \{f^n\}_{n \geq 1}$. Which means that $f \not \in \mathfrak{p}$. But that means $\mathfrak{p}$ belongs in the subset $X_f$ of $X$. So $\Spec(A_f) \subseteq X_f$. Conversely, if $\mathfrak{p} \in X_f$ then that prime ideal does not contain $f$, so does not meet $S = \{f^n\}_{n \geq 1}$. Therefore we have a unique prime ideal $\byS \mathfrak{p} \in A_f$. Therefore we have the reverse inclusion and the proposition is proved.
+\end{proof}
+
+So we are justified in introducting the new notation, given $U = X_f$, 
+    $$A(U) = A_f$$ 
+    The ring $A(U)$ is only dependent on $U$ as a subset of $X$ and not on $f$.
+
+
+\begin{prop}
+    If $U = X_f$ and $U' = X_g$ are any two \textit{basic open sets} of $X = \Spec(A)$ such that $U' \subseteq U$. 
+    Then there exists a $u \in A$ such that $g^n = uf$ for some integer $n > 0$. 
+\end{prop}
+\begin{proof}
+    Since $U' \subseteq U$ we have that $X_g \subseteq X_f$. As $X_g = X - V(g)$ and $X_f = X - V(f)$ we have $V(f) \subseteq V(g)$. Which means that every prime ideal $\mathfrak{p}$ in $A$ that contains $f$ also constans $g$.
+
+    The radical of an ideal $\mathfrak{a}$ is the intersection of all prime ideals which contain $\mathfrak{a}$. Since $(f) \subseteq \mathfrak{p}$ is an ideal of $A$, 
+    $$r((f)) = \bigcap_{f \in \mathfrak{p}} \mathfrak{p}, \text{ where } \mathfrak{p} \text{ prime in } A$$
+
+    Since $g$ belong to the $\mathfrak{p}$ if $f$ belongs to it we see that $g$ also belongs to $r((f))$. Which implies that $g^n \in (f)$ for some integer $n > 0$. Which means that there exists a $u \in A$ such that $g^n = uf$.
+\end{proof}
+
 
 \begin{defn}
+    We define the homomorphim $\rho: A(U) \rightarrow A(U')$ as the mapping $a/f^m \mapsto au^m/g^{nm}$. This homomorphim is called the \textit{restriction} homomorphim.
+\end{defn}
+
+
+
+\begin{prop} % modify this to be an application instead of a definition
     A \textit{presheaf of rings} on the basis of open sets $(X_f)_{f \in A}$ is the mapping $A(U) = X_f$ from the open sets to the rings $X_f$ and the \textit{restriction} homomorphim which satsifies the following two conditions
     \begin{enumerate}
         \item If $U = U'$ then $\rho$ is the identity map.
@@ -528,9 +592,7 @@ Suppose we have the ring homomorphim $\phi: A \rightarrow \byS A$ given by $a \m
     $$\varinjlim_{x \in U} A(U) \cong A_\mfk{p}.$$
 
     (Ex 23)
-\end{defn}
-
-What we are doing here is assigning to each open set a ring and then organising the rings using homomorphims between them. A presheaf and sheaf (below) is a method of organising a collection of open sets on a topological space by associating rings with each open set and mappings between them called \textit{restriction} mappings. We need one more condition before we can call a \textit{presheaf} a \textit{sheaf} called \textit{glueability}.
+\end{prop}
 
 \begin{defn}
     Given a presheaf as above on a collection of basic open sets $(U_i)_{i \in I}$ which cover $X$, it is called a \textit{sheaf} if it satsifies the following condition. 
@@ -580,6 +642,10 @@ The set of elements in $B$ that are \textit{integral} over $A$ form a subring $C
 \bibitem{treasuremap}
     Mumford's Treasure Map,
     \href{https://web.archive.org/web/20201130150255/http://www.neverendingbooks.org/mumfords-treasure-map}{\textit{Mumford's Treasure Map}}
+
+\bibitem{miles}
+    Miles Reid,
+    \textit{Undergraduate Algebraic Geometry}
 \end{thebibliography}
 
 \end{document}
