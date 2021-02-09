@@ -573,10 +573,7 @@ So we are justified in introducting the new notation, given $U = X_f$,
     We define the homomorphim $\rho: A(U) \rightarrow A(U')$ as the mapping $a/f^m \mapsto au^m/g^{nm}$. This homomorphim is called the \textit{restriction} homomorphim.
 \end{defn}
 
-
-
-\begin{prop} % modify this to be an application instead of a definition
-    A \textit{presheaf of rings} on the basis of open sets $(X_f)_{f \in A}$ is the mapping $A(U) = X_f$ from the open sets to the rings $X_f$ and the \textit{restriction} homomorphim which satsifies the following two conditions
+We shall show that the homomorphim $\rho$ satisfies the two condiions
     \begin{enumerate}
         \item If $U = U'$ then $\rho$ is the identity map.
         \item If $U \supseteq U' \supseteq U''$ then the following diagram commutes 
@@ -588,17 +585,49 @@ So we are justified in introducting the new notation, given $U = X_f$,
         \end{center}
     \end{enumerate} 
 
-    The stalk of the presheaf is defined as the direct limit of $A(U)$. In this case the stalk is
+\begin{proof}
+    \begin{enumerate}
+        \item It follows easily from the definition that $\rho$ is an identity mapping. 
+        \item We have $U'' \subseteq U$ hence there exists a $u'' \in A$ and and integer $n>0$ such that $h^n = u''f, n>0$.
+
+            Similarily, as $U'' \subseteq U'$ there exists $u \in A$ and an integer $l > 0$ such that $h^l = ug$. 
+
+            As $U' \subseteq U$ there exists $u' \in A$ and an integer $m > 0$ such that $g^m = u'f$.
+
+            Therefore $\rho_1 : A(U) \rightarrow A(U')$ is the mapping $a/f^t \mapsto a{u'}^t/g^{tm}$, $\rho_2: A(U) \rightarrow A(U'')$ is the mapping $a/f^t \mapsto a{u''}^t/h^{tn}$ and $\rho_3: A(U') \rightarrow A(U'')$ is the mapping $a/g^t \mapsto au^t/h^{tl}$.
+
+            We claim that $\rho_2 = \rho_3 \circ \rho_1$. To prove this claim we show that $\rho_3 \circ \rho_1 (a/f^t) - \rho_2(a/f^t) = 0$.
+
+            $$\rho_3 \circ \rho_1 (a/f^t) = \rho_3(a{u'}^t/g^{tm}) = \frac{a{u'}^t u^{tm}}{h^{tml}}$$
+            $$\rho_2(a/f^t) = \frac{a{u''}^t}{h^{tn}}$$
+            
+        The difference between the two terms is after simplification
+        $$a\frac{{u''}^t h^{tml} - {u'}^t u^{tm} h^{tn}}{h^{tn} h^{tml}}$$
+        Denote by $S$ the numerator of the above term. 
+        $$S = {u''}^t h^{tml} - {u'}^t u^{tm} h^{tn}$$
+        We have $h^l = ug$ and $h^n = u''f$. Substituting,
+        $$S = {u''}^t (ug)^{tm} - {u'}^t u^{tm} (u''f)^t$$
+        Now $g^m = u'f$ so 
+        $$S = {u''}^t u^{tm} (u'f)^t - {u'}^t u^{tm} {u''}^t f^t$$
+        $$= {u''}^t u^{tm} {u'}^t f^t - {u'}^t u^{tm} {u''}^t f^t = 0$$
+        Hence $\rho_2 = \rho_3 \circ \rho_1$ and therefore the diagram commutes.
+    \end{enumerate}
+\end{proof}
+
+So we see that the collection of open sets $U = X_f$ on $\Spec(A)$ forms a \textit{presheaf} by the \textit{restriction homomorphim} $\rho$, the associated ring to $U$ is of course $A(U) = A_f$.
+
+    The stalk of this presheaf is defined as the direct limit of $A(U)$. In this case the stalk is
     $$\varinjlim_{x \in U} A(U) \cong A_\mfk{p}.$$
 
     (Ex 23)
+
+\begin{prop}
+    The presheaf of rings on the collection of basic open sets $(U_i)_{i \in I} = X_f$ which cover $X = \Spec(A)$ with the ring of sections $A(U) = A_f$ is a \textit{sheaf}. 
 \end{prop}
 
-\begin{defn}
-    Given a presheaf as above on a collection of basic open sets $(U_i)_{i \in I}$ which cover $X$, it is called a \textit{sheaf} if it satsifies the following condition. 
-
-For each $i,j \in I$, let the mapping of $s_i \in A(U_i)$ and $s_j \in A(U_j)$ by the restriction mapping into $A(U_i \cap U_j)$ be equal then there exists a unique $s \in A(X)$ whose image in $A(U_i)$ is $s_i$ for all $i \in I$. 
-\end{defn}
+\begin{proof}
+    For each $i,j \in I$, let the mapping of $s_i \in A(U_i)$ and $s_j \in A(U_j)$ by the restriction mapping into $A(U_i \cap U_j)$ be equal then there exists a unique $s \in A(X)$ whose image in $A(U_i)$ is $s_i$ for all $i \in I$. (See Chapter 3, Ex 24 \cite{atiyah1}). 
+\end{proof}
 
 % Consider including the abstract defintion of a sheaf here as well. Once they've seen an proper example it's much easier to understand the abstract definition. But often if you get over the abstractness of the definition, that sort of definition is much more clearer and simpler than a concrete example. But this comes at the cost of not really understanding how concept behaves in the wild. 
 
