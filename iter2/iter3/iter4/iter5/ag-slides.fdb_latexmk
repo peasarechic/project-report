@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1612883021 "ag-slides.tex" "ag-slides.pdf" "ag-slides" 1612883023
+["pdflatex"] 1612883021 "ag-slides.tex" "ag-slides.pdf" "ag-slides" 1612929994
   "/usr/local/texlive/2020basic/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "/usr/local/texlive/2020basic/texmf-dist/fonts/tfm/public/cm/cmss10.tfm" 1136768653 1316 b636689f1933f24d1294acdf6041daaa ""
   "/usr/local/texlive/2020basic/texmf-dist/fonts/tfm/public/cm/cmss12.tfm" 1136768653 1324 37b971caf729d7edd9cbb9f9b0ea76eb ""
@@ -171,10 +171,10 @@
   "ag-slides.tex" 1612882515 3300 8c7e08766367c0b0309f1d76493a2bd4 ""
   "ag-slides.toc" 1612883023 748 df70f60d0020bf1b90876f205e5ad249 "pdflatex"
   (generated)
+  "ag-slides.aux"
   "ag-slides.nav"
   "ag-slides.log"
-  "ag-slides.snm"
   "ag-slides.toc"
+  "ag-slides.snm"
   "ag-slides.pdf"
-  "ag-slides.aux"
   "ag-slides.out"
