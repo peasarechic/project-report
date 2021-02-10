@@ -660,11 +660,24 @@ Let $A$ and $B$ be rings with a homomorphim $f: A \rightarrow B$ between them. A
 
 We shall now define another topology on $X = \Spec(A)$ by considering all subsets $f^*(\Spec(B))$ in $X$ to be closed for each homomorphim $f: A \rightarrow B$. This topology is called the \textit{constructible topology}. (Ex 27).
 
-For each $f \in A$ the set $X_f$ in $X$ is both open and closed under the \textit{constructible topology}. The \textit{constructible topology} is the smallest topology on $X$ for which all $X_f$ are both open and closed. We can show that the space $X$ is compact, Hausdorff and totally disconnected under the \textit{constructible topology}. (Ex 28)
+For each $f \in A$ the set $X_f$ in $X$ is both open and closed under the \textit{constructible topology}. The \textit{constructible topology} is the smallest topology on $X$ for which all $X_f$ are both open and closed. We can show that the space $X$ is compact, Hausdorff and totally disconnected under the \textit{constructible topology}. (See Chapter 3, Ex 28 \cite{atiyah1})
 
 \begin{prop}
     The Zariski topology and the constructible topology on $X = \Spec(A)$ are the same if and only if $A/\mfk{N}$ is \textit{absolutely flat}.
 \end{prop}
+
+\begin{proof}
+    Let $(X,\tau_1)$ be the Zariski Topology and let $(X, \tau_2)$ be the constructible topology on $X = \Spec(A)$ and suppose both topologies are identitcal. Under $\tau_2$ the constructible topology is Hausdorff. Hence the Zariski topology on $X$ is Hausdorff as well. By Chapter 3, Ex 11, \cite{atiyah1}, we see that $A/\mathfrak{N}$ is \textit{absolutely flat}.
+
+    Conversely, let $A/\mathfrak{N}$ be \textit{absolutely flat}. Then under the Zariski Topology $X$ is a Hausdorff space by Chapter 3, Ex 11 \cite{atiyah1}.
+
+    Now we use the following well known theorem from topology.
+    \begin{lemma}
+        Let $f: (X, \tau_1) \rightarrow (Y, \tau_2)$ be a continuous bijection. If $X$ is compact and $Y$ is Hausdorff, then $f$ is a homeomorphism.
+    \end{lemma}
+
+    We know that the basic open sets $X_f$ are open and closed in both the Zariski and the Constructible topology. Therefore the identity mapping is a continuous bijection. Say $f_{id}: (X,\tau_2) \rightarrow (X, \tau_1)$. We know that the $X$ with the constructible topology is \textit{quasi-compact} and therefore compact (See Ch 3, Ex 27.iv \cite{atiyah1}). The Zariski Topology is Hausdorff from the hypothesis. Hence by the lemma $f_{id}$ is an identity homeomorphism. Therefore the two topologies are identical.
+\end{proof}
 
 
 \chapter{The Going-Up Theorem}
@@ -673,13 +686,26 @@ Suppose we have a ring $B$ and a subring $A$ such that $A \subseteq B$. Then an 
 
 The set of elements in $B$ that are \textit{integral} over $A$ form a subring $C$ of $B$ called the \textit{integral closure} of $A$ in $B$.
 
-\begin{theorem}
+\begin{prop}\label{5.6}
+    Let $A\subseteq B$ be rings, B integral over A.
+    \begin{enumerate}
+        \item If $\mathfrak{b}$ is an ideal of B and $\mathfrak{a = b^c} = A \cap \mathfrak{b}$, then $B/\mathfrak{b}$ is integral over $A/\mathfrak{a}$. 
+        \item If S is a multiplicatively closed subset of A, then $S^{-1}B$ is integral over $S^{-1}A$.
+    \end{enumerate}
+\end{prop}
+    
+
+\begin{theorem}\label{5.10}
     Let $A\subseteq B$ be rings, B integral over A, and let $\mathfrak{p}$ be a prime ideal of A, Then there exists a prime ideal $\mathfrak{q}$ of B such that $\mathfrak{q}\cap A = \mathfrak{p}$. 
 \end{theorem}
 
 \begin{theorem}
     \textbf{(Going-up theorem)} Let $A \subseteq B$ be rings, B integral over A; let $\mathfrak{p_1 \subseteq \cdots \subseteq p_n}$ be a chain of prime ideals of A and $\mathfrak{q \subseteq \cdots \subseteq q_m} (m < n )$ a chain of prime ideals of B such that $\mathfrak{q_i} \cap A = \mathfrak{p_i} (1 \leq i \leq m)$. Then the chain $\mathfrak{q_1 \subset \cdots \subseteq q_m}$ can be extended to a chain $\mathfrak{q_1 \subseteq \cdots \subseteq q_n}$ such that $\mathfrak{q_i} \cap A = \mathfrak{p_i}$ for $1 \leq i \leq n$.
 \end{theorem}
+
+\begin{proof}
+By induction we reduce immediately to the case $m = 1, n = 2$. Let $\bar{A} = A/\mathfrak{p}_1, \bar{B} = B/\mathfrak{q}_1$; then $\bar{A} \subseteq \bar{B}$, and $\bar{B}$ is integral over $\bar{A}$ by \ref{5.6}. Hence, by \ref{5.10}, there exists a prime ideal $\bar{\mathfrak{q}_2}$ of $\bar{B}$ such that $\bar{\mathfrak{q}_2} \cap \bar{A} = \bar{\mathfrak{p}_2}$, the image of $\mathfrak{p}_2$ in $\bar{A}$. Lift back $\bar{\mathfrak{q}_2}$ to $B$ and we have a prime ideal $\mathfrak{q}_2$ with the requird properties. 
+\end{proof}
 
 \begin{thebibliography}{9}
 
