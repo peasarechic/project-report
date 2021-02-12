@@ -1,0 +1,88 @@
+\documentclass[pdf]{beamer}
+\mode<all>{\usetheme{Warsaw} \useoutertheme{default}}
+\mode<handout>{\usecolortheme{seagull}}
+%\usenavigationsymbolstemplate{}
+\newtheorem{defn}[theorem]{Definition}
+
+\title{Introduction to Commutative Algebra}
+\subtitle{and affine algebraic varieties}
+\author{Amal M}
+\date{\today}
+
+\begin{document}
+
+\AtBeginSection[]{
+\begin{frame}{Table of Contents}
+	\tableofcontents[currentsection]
+\end{frame}
+}
+
+\begin{frame}
+    \thispagestyle{empty}
+    \titlepage
+\end{frame}
+\addtocounter{framenumber}{-1}
+
+\begin{frame}{Table of Contents}
+    \tableofcontents
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+\begin{frame}
+    \begin{itemize}
+        \item Commutative Algebra is the first step in learning Algebraic Geometry. 
+        \item Commutative Algebra is the study of algebras over Commutative rings.
+        \item Algebraic Geometry is the study of curves given by polynomial equations.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    How is Algebraic Geometry related to Commutative Algebra?
+    \begin{itemize}
+        \item<2-> Curves given by polynomial equations are examples of algebraic varieties. 
+        \item<3-> Algebraic varieties have the properties of both an algebraic object, a $k$-algebra and a geometric object, a curve in space
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    How is this useful?
+    \begin{itemize}
+        \item<2-> Geometry problems can be tackled using algebraic methods
+        \item<3-> Algebraic problems can be solved using geometric intuition
+        \item<4-> Certain problems in number theory can also be solved!
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    Where have we seen this before?
+    \pause
+     We have seen this in Analytical geometry!
+    \pause
+    Algebraic geometry may rightly be seen as the modern version of analytical geometry
+\end{frame}
+
+\section{Algebraic Variety}
+
+\begin{frame}
+    What is an Algebraic Variety?
+    \begin{itemize}
+        \item<2-> An algebraic variety is the subset of an affine space that is cut out by polynomials.
+        \item<3-> It is denoted by V(S)
+    \end{itemize}
+\end{frame}
+
+\section{Prime and Maximal Spectrum}
+
+\begin{frame}
+    Given a commutative ring $A$, $\mathfrak{a}$ is an ideal of the ring if it is a subgroup of $A$ so that if $x \in \mathfrak{a}$ and $a \in A$ then $ax \in \mathfrak{a}$.
+    \begin{itemize}
+        \item<2-> An ideal $\mathfrak{p}$ is a special ideal with the property such that 
+\end{frame}
+
+\section{Zariski Topology}
+\section{Localization}
+\section{Conclusion}
+\end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.21)  11 FEB 2021 19:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.21)  12 FEB 2021 19:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -668,25 +668,25 @@ Overfull \vbox (0.63347pt too high) has occurred while \output is active []
 
  [4
 
-] (./ag-slides.toc)
-Overfull \vbox (0.63347pt too high) has occurred while \output is active []
-
- [5
-
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
  (/usr/local/texlive/2020basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Overfull \vbox (0.63347pt too high) has occurred while \output is active []
 
+ [5
+
+]
+Overfull \vbox (0.63347pt too high) has occurred while \output is active []
+
  [6
 
-] (./ag-slides.toc)
+]
 Overfull \vbox (0.63347pt too high) has occurred while \output is active []
 
  [7
@@ -696,52 +696,86 @@ Overfull \vbox (0.63347pt too high) has occurred while \output is active []
 
  [8
 
-] (./ag-slides.toc)
+]
 Overfull \vbox (0.63347pt too high) has occurred while \output is active []
 
  [9
 
-] (./ag-slides.toc)
+]
 Overfull \vbox (0.63347pt too high) has occurred while \output is active []
 
  [10
 
-] (./ag-slides.toc)
+]
 Overfull \vbox (0.63347pt too high) has occurred while \output is active []
 
  [11
 
 ]
-\tf@nav=\write6
-\openout6 = `ag-slides.nav'.
+Overfull \vbox (0.63347pt too high) has occurred while \output is active []
 
-\tf@toc=\write7
-\openout7 = `ag-slides.toc'.
+ [12
 
-\tf@snm=\write8
-\openout8 = `ag-slides.snm'.
+]
+Overfull \vbox (0.63347pt too high) has occurred while \output is active []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 59.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 59.
- (./ag-slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 59.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 59.
-Package rerunfilecheck Info: File `ag-slides.out' has not changed.
-(rerunfilecheck)             Checksum: 51E464DC1DCEB62ED3022E5E4CA89778;303.
- ) 
+ [13
+
+]
+Overfull \vbox (0.63347pt too high) has occurred while \output is active []
+
+ [14
+
+] (./ag-slides.toc)
+Overfull \vbox (0.63347pt too high) has occurred while \output is active []
+
+ [15
+
+]
+Overfull \vbox (0.63347pt too high) has occurred while \output is active []
+
+ [16
+
+]
+Overfull \vbox (0.63347pt too high) has occurred while \output is active []
+
+ [17
+
+]
+Overfull \vbox (0.63347pt too high) has occurred while \output is active []
+
+ [18
+
+] (./ag-slides.toc)
+Overfull \vbox (0.63347pt too high) has occurred while \output is active []
+
+ [19
+
+])
+Runaway argument?
+\let \AtEndDocument \@firstofone \@enddocumenthook \@checkend {docume\ETC.
+! File ended while scanning use of \beamer@collect@@body.
+<inserted text> 
+                \par 
+<*> ag-slides.tex
+                 
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+! Emergency stop.
+<*> ag-slides.tex
+                 
+*** (job aborted, no legal \end found)
+
+ 
 Here is how much of TeX's memory you used:
- 17807 strings out of 482056
- 344163 string characters out of 5937674
+ 17861 strings out of 482056
+ 345265 string characters out of 5937674
  589988 words of memory out of 5000000
- 33011 multiletter control sequences out of 15000+600000
+ 33054 multiletter control sequences out of 15000+600000
  538956 words of font info for 48 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  54i,19n,65p,829b,645s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb>
-Output written on ag-slides.pdf (11 pages, 71963 bytes).
-PDF statistics:
- 478 PDF objects out of 1000 (max. 8388607)
- 436 compressed objects within 5 object streams
- 29 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+!  ==> Fatal error occurred, no output PDF file produced!

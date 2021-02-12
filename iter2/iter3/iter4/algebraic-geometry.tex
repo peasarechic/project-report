@@ -40,7 +40,7 @@
 
 \begin{abstract}
 
-    The motivation for the study of algebraic geometry is how algebraic objects (rings of rational functions) are associated with varieties (zeros of polynomials). This subject florished during the second half of the twentieth century. Algebraic geometry allows us to study the geometry arising from algebraic objects. Core to the deeper understanding of this subject is an understanding of the subject of commutative algebra which studies commutative rings and their ideals and modules. The purpose of the present project is to gain an understanding of commutative algebra through solving exercises from Atiyah-MacDonald's book, Introduction to Commutative Algebra. The reading project comprised of the study of the theory of rings and modules, their tensor product and exact sequences of rings and modules. The project concluded with a proof of the Going-Up Theorem.
+    The motivation for the study of algebraic geometry is how algebraic objects (rings of rational functions) are associated with varieties (zeros of polynomials). This subject flourished during the second half of the twentieth century. Algebraic geometry allows us to study the geometry arising from algebraic objects. Core to the deeper understanding of this subject is an understanding of the subject of commutative algebra which studies commutative rings and their ideals and modules. The purpose of the present project is to gain an understanding of commutative algebra by solving exercises from Atiyah-MacDonald's book, Introduction to Commutative Algebra. The reading project comprised of the study of the theory of rings and modules, their tensor product and exact sequences of rings, modules, localization of rings and the Going-up theorem. 
 
 \end{abstract}
 
@@ -53,7 +53,7 @@ The purpose of the current project is to give an understanding
 to the reader of how commutative algebra is used to define the basic
 objects of algebraic geometry. Algebraic Geometry is the study of
 the geometric properties of the solution set of polynomial equations
-in arbitary variables. For this purpose it is useful to confine the 
+in arbitrary indeterminates. For this purpose it is useful to confine the 
 discussion to algebraically closed fields $k$ and the polynomial ring
 $k[x_1,\cdots,x_n]$. Since $k$ is a field, $k^n$ is a vector field for all $n>1$. An \textit{affine space} is a special vector space where we do not associate a unique vector to a point, that is, we do not consider each point of the vector space as a vector from a unique origin to the point. Instead we think only about vectors from any $a$ to any other point $b$ as translation vectors. Thus, in an \textit{affine space} we have dispensed with the concept of an origin. 
 
@@ -63,13 +63,13 @@ The \textit{affine n-space} over the algebraically closed field $k$ is the vecto
     $$V(S) = \{x = (x_1,\cdots,x_n) \in \mathbb{A}^n_k : f(x) = 0 \text{ for all } f \in S\}.$$
 \end{defn}
 
-The affine variety is not the only example of a variety. The projective variety defined over projective spaces $\mathbb{P}^n_k$ is another example of an algebraic variety.
+The affine variety is not the only example of a variety. The projective variety defined over the projective space $\mathbb{P}^n_k$ is another example of an algebraic variety.
 
 The solution set or \textit{locus} of solutions of polynomials of degree one are discrete points in $k$. But over $k^2$ the \textit{locus} are curves or intersections of curves. For example, the solution of the elliptic curve given by the polynomial equation in $\mathbb{R}[x,y]$ in $\mathbb{R}^2$  
     $$y^2 = x^3 - 3x + 5$$
-    is a curve (Fig 1.).
+    is a curve (Fig \ref{ell_curv1}).
 
-    Naturally, the question arises: \textit{what does the solution set of a set of polynomials in $k^3$ look like? What about $k^n$?} which is the same as asking \textit{what does an affine algebraic variety in $\mathbb{A}^n_k$ look like?} In general it is an intersection of a collection of affine algebraic hypersurface of $n-1$ dimension each defined by one of the polynomials.
+    Naturally, the question arises: \textit{what does the solution set of a set of polynomials in $k^3$ look like? What about $k^n$?} which is the same as asking \textit{what does an affine algebraic variety in $\mathbb{A}^n_k$ look like?} In general it is an intersection of a collection of affine algebraic hyper-surface of $n-1$ dimension each defined by one of the polynomials.
 
     We may go further. \textit{What is the topology of the affine algebraic variety?} There is no one single way to define a topology on an affine algebraic variety. But the first topology we shall introduce is called the \textit{Zariski Topology}.
 
@@ -85,27 +85,26 @@ The solution set or \textit{locus} of solutions of polynomials of degree one are
 
     In the third section we introduce the \textit{rings of fractions} of modules and the concept of \textit{localization} which we use in the formulation of a sort of structure called \textit{presheaf} and \textit{sheaf} which is a method to talk about a collection of open sets on a topological space. We also introduce the \textit{constructible topology} and the precise condition under which this topology is equivalent to the \textit{Zariski Topology} on $\Spec(A)$. 
 
-    In the final section we introduce integral dependence, that is elements of rings that are integral over a subring and discuss the proof of the Going-Up Theorem.
+    In the final section we introduce integral dependence, that is elements of rings that are integral over a sub-ring and discuss the proof of the Going-Up Theorem.
 
-    % Start by giving an overview of the table of content
 
 \begin{figure}
   \includegraphics[width=\linewidth]{img/ell_curv1.png}
-  \caption{Fig 1.}
-  \label{fig:ell_curv1}
+  \caption{$y^2 = x^3 - 3x + 5$}
+  \label{ell_curv1}
 \end{figure}
 
 \chapter {The Zariski Topology}
 
-In commutative algebra what we generally call a \textit{ring} is a commutative ring with unity, i.e, $1\in A$. So from now on, when we say ring we mean a set $A$ with two binary operations on it's elements $a + b \text{ and } a\dot b$, for all $a,b\in A$ such that A is an abelian group with respect to addition and multipication is associative as well as distributive over addition.
+In commutative algebra what we generally call a \textit{ring} is a commutative ring with unity, i.e, $1\in A$. So from now on, when we say ring we mean a set $A$ with two binary operations on it's elements $a + b \text{ and } a\dot b$, for all $a,b\in A$ such that A is an abelian group with respect to addition and multiplication is associative as well as distributive over addition.
 
 A \textit{unit} in a ring $A$ is an element $x\in A$ such that there is another element $y\in A$ so that $xy = 1$. A ring in which every element is a \textit{unit} is called a \textit{field}. 
 
 An element $x\in A$ is a \textit{nilpotent} element if $x^n = 0$ for some $n>0$. An element $x$ is an \textit{idempotent} element if $x^2 = x$. 
 
-If we are given a group $G$ and a normal subgroup $N$, the quotient group $G/N$ is also a group. Similarily if $f: G \rightarrow G'$ is a group homomorphim, the kernel of $f$, $\Ker(f)$ is a normal subgroup in $G$. 
+If we are given a group $G$ and a normal subgroup $N$, the quotient group $G/N$ is also a group. Similarly if $f: G \rightarrow G'$ is a group homomorphism, the kernel of $f$, $\Ker(f)$ is a normal subgroup in $G$. 
 
-In the case of rings the role of a normal subgroup is played by subsets of $A$ called \textit{ideals}. Quotienting by an ideal gives another ring and all kernals of ring homomorphims are ideals as well.
+In the case of rings the role of a normal subgroup is played by subsets of $A$ called \textit{ideals}. Quotienting by an ideal gives another ring and all kernels of ring homomorphisms are ideals as well.
 
 \begin{defn}
     A subset $\mathfrak{a} \subseteq A$ is called an \textit{ideal} of $A$ if $\mathfrak{a}$ is an additive subgroup and it has the property, $y\in \mathfrak{a}$ and $x\in A$ implies $xy\in \mathfrak{a}$.
@@ -131,7 +130,7 @@ In the case of rings the role of a normal subgroup is played by subsets of $A$ c
     \end{enumerate}
 \end{proof}
 
-Therefore every \textit{maximal ideal} is a \textit{prime ideal} but the converse is not true in general. The reason prime ideals and maximal ideals are so important is because they have "nice" properties when we transport them across ring homomorphims. For example given a ring homomorphim $f:A\rightarrow B$ and a prime ideal $\mathfrak{q}\subset B$ the set $f^{-1}(\mathfrak{q})$ is a prime ideal  $\mathfrak{p}\subset A$. 
+Therefore every \textit{maximal ideal} is a \textit{prime ideal} but the converse is not true in general. The reason prime ideals and maximal ideals are so important is because they have "nice" properties when we transport them across ring homomorphism. For example given a ring homomorphism $f:A\rightarrow B$ and a prime ideal $\mathfrak{q}\subset B$ the set $f^{-1}(\mathfrak{q})$ is a prime ideal  $\mathfrak{p}\subset A$. 
 \begin{proof}
     Let $xy \in f^{-1}(\mathfrak{q})$. Then $f(xy) = f(x).f(y) \in \mathfrak{q}$. Since $\mathfrak{q}$ is \textit{prime}, either $f(x) \in \mathfrak{q} \text{ or } f(y) \in \mathfrak{q}$. Therefore we have either $x \text{ or } y \in f^{-1}(\mathfrak{q})$.
 \end{proof}
@@ -148,13 +147,13 @@ A ring with just one \textit{maximal} ideal $\mathfrak{m}$ is called a \textit{l
 
 We can show that the \textit{radical} of an ideal is the intersection of all prime ideals that contain that ideal \cite{atiyah1}. If $x$ is an element of $\mathfrak{a}$ and if $x$ is any power of an element then that element belongs to the \textit{radical}. So the \textit{radical} is a way to associate elements related to $\mathfrak{a}$ by it's power. That is, if $f^n\in \mathfrak{a}$ then by definition of an ideal all the powers of $f$ higher than $n$ also belongs to $\mathfrak{a}$, the \textit{radical} ideal includes \textit{lower powers} of $f$ such as $f^{n-2}, f^{n-5}$ and so on. So we can have all powers of $f$ in $r(\mathfrak{a})$ if just one power of $f$ is in $\mathfrak{a}$. 
 
-We just need to define one more concept before we can move on to define the \textit{prime spectrum} of a ring. The set of all nilpotent elements in a ring is called the \textit{nilradical} of $A$ and is denoted by $\mathfrak{N}$.
+We just need to define one more concept before we can move on to define the \textit{prime spectrum} of a ring. The set of all nilpotent elements in a ring is called the \textit{nil-radical} of $A$ and is denoted by $\mathfrak{N}$.
 
 \begin{prop}
     The set $\mathfrak{N}$ of all nilpotent elements in a ring A is an ideal and $A/\mathfrak{N}$ has no nilpotent element $\neq 0$. \cite{atiyah1}
 \end{prop}
 
-The \textit{nilradical} of a ring $A$ has the property that it is equal to the intersection of all the prime ideals of $A$. \textit{What is the intersection of all maximal ideals of $A$?}. The answer is called the \textit{Jacobson ideal} of $A$ denoted by $\mathfrak{R}$. It has the following property
+The \textit{nil-radical} of a ring $A$ has the property that it is equal to the intersection of all the prime ideals of $A$. \textit{What is the intersection of all maximal ideals of $A$?}. The answer is called the \textit{Jacobson ideal} of $A$ denoted by $\mathfrak{R}$. It has the following property
 
 \begin{prop}
     $x\in \mathfrak{R} \Leftrightarrow 1-xy$ is a unit in A for all $y\in A$. \cite{atiyah1}
@@ -167,7 +166,7 @@ The \textit{prime spectrum} of a ring is the set of all \textit{prime} ideals of
 A topology on a space can be axiomatically defined using just the closed sets. That is we need only satisfy these axioms
 \begin{enumerate}
     \item The sets $\varnothing$ and $X$ are closed. 
-    \item Arbitary intersection of closed sets are closed. 
+    \item Arbitrary intersection of closed sets are closed. 
     \item Finite union of closed sets are closed.
 \end{enumerate}
 
@@ -192,10 +191,10 @@ $$V(E) = \{\mathfrak{p}\in \Spec(A): \text{ all prime ideals } \mathfrak{p} \tex
         therefore
         $$V(\bigcup_{i \in I} E_i) = \bigcap_{i \in I} V(E_i).$$
 
-        In the \textit{Zariski Topology} the closed sets are only those subsets of $X$ of the form $V(E)$ for some subset $E$ of $A$. Therefore this equation states precisely that the intersection of arbitary closed sets is a closed set.
+        In the \textit{Zariski Topology} the closed sets are only those subsets of $X$ of the form $V(E)$ for some subset $E$ of $A$. Therefore this equation states precisely that the intersection of arbitrary closed sets is a closed set.
     \item Let $E \subseteq A$ and let $\mathfrak{a}$ be the ideal generated by $E$ in $A$. If $\mathfrak{p} \in V(E)$ then $\mathfrak{p}$ is a prime ideal containing $E$. As $\mathfrak{a}$ is generated by $E$ it is also contained in $\mathfrak{p}$, i.e., $\mathfrak{p} \in V(\mathfrak{a})$. Hence $V(E) \subseteq V(\mathfrak{a})$.
 
-        Conversely, let $\mathfrak{p} \in V(\mathfrak{a})$, $\mathfrak{p}$ is a prime ideal containing $\mathfrak{a}$. But $\mathfrak{a}$ is generted by $E$, hence $E \subseteq \mathfrak{a}$. So $E \subseteq \mathfrak{p}$ as well. Therefore $\mathfrak{p} \in V(E)$. Hence we have the reverse inclusion $V(\mathfrak{a}) \subseteq V(E)$. Therefore we have
+        Conversely, let $\mathfrak{p} \in V(\mathfrak{a})$, $\mathfrak{p}$ is a prime ideal containing $\mathfrak{a}$. But $\mathfrak{a}$ is generated by $E$, hence $E \subseteq \mathfrak{a}$. So $E \subseteq \mathfrak{p}$ as well. Therefore $\mathfrak{p} \in V(E)$. Hence we have the reverse inclusion $V(\mathfrak{a}) \subseteq V(E)$. Therefore we have
         $$V(E) = V(\mathfrak{a}).$$
 
         We shall now show that $V(\mathfrak{a} \cap \mathfrak{b}) = V(\mathfrak{ab})$. Let $\mathfrak{p} \in V(\mathfrak{a} \cap \mathfrak{p}), \mathfrak{p}$ is a prime ideal. So $\mathfrak{a} \cap \mathfrak{b} \subseteq \mathfrak{p}$. But we also have the identity $\mathfrak{ab} \subseteq \mathfrak{a} \cap \mathfrak{b}$. So $\mathfrak{ab} \subseteq \mathfrak{p}$, which means that $\mathfrak{ab} \subseteq V(\mathfrak{p})$. So $\mathfrak{p} \in V(\mathfrak{ab})$. Therefore we have the inclusion $V(\mathfrak{a}) \cap \mathfrak{b}) \subseteq V(\mathfrak{ab})$.
@@ -234,14 +233,14 @@ $X$ is \textit{quasi-compact}. That is every open covering of $X$ has a finite s
 
     Since $1 \in \mathfrak{a}$ then it must be representable as a finite sum  by definition, i.e., $1 = \sum_{i \in J} g_i f_i$, where $J$ is a finite subset of $I$. Which means that $\mathfrak{a} = (1) = (f_i)_{i \in J}$.
     
-    Hence $\varnothing = V(1) = V(\mathfrak{a}) = V(E) = V(E')$ where $E'$ is the subset of $E$ containing only finitley many $f_i$, i.e., $i \in J$. 
+    Hence $\varnothing = V(1) = V(\mathfrak{a}) = V(E) = V(E')$ where $E'$ is the subset of $E$ containing only finitely many $f_i$, i.e., $i \in J$. 
 
     If $\mathfrak{p} \in X$ then $\mathfrak{p} \not \in V(\mathfrak{a}) = V(E')$. Which means $E' \not \subseteq \mathfrak{p}$. Therefore for some $i \in J$, there exists $f_i \in E'$ such that $f_i \not \in \mathfrak{p}$ which is same as $\mathfrak{p} \in X_{f_i}$.
 
     Hence $X$ is covered by a finite covering.
 \end{proof}
 
-    Which is exactly the same as \textit{compactness} in regular topology. For some reason Algebraic Geometers do not use the term \textit{compactness} to mean just the condition \textit{every open cover has a finite subcover}. But instead a space is \textit{compact} if it is also Hausdorff as well as \textit{quasi-compact}. This is because every $\Spec(A)$ has the usual property of having a finite subcover for an open covering. So just calling it \textit{compact} is a waste of a perfectly good word that can be used for something more significant. 
+    Which is exactly the same as \textit{compactness} in regular topology. For some reason Algebraic Geometers do not use the term \textit{compactness} to mean just the condition \textit{every open cover has a finite sub-cover}. But instead a space is \textit{compact} if it is also Hausdorff as well as \textit{quasi-compact}. This is because every $\Spec(A)$ has the usual property of having a finite sub-cover for an open covering. So just calling it \textit{compact} is a waste of a perfectly good word that can be used for something more significant. 
 
     We find that every open set $X_f$ is quasi-compact as well every finite union of sets $X_f$. Indeed we have that a subset of $X$ is quasi-compact if and only if it is a union of finitely many open sets $X_f$.
 
@@ -267,7 +266,7 @@ $$U_f = \{x\in X:f(x) = 0\}$$
 $$\hat{U}_f = \{\mathfrak{m}\in \hat{X}:f\not\in \mathfrak{m}\}$$
 We can show that $\mu(U_f) = \hat{U}_f$ (Ex 27.iii). So $\mu$ sends the basis of $X$ the basis of $\hat{X}$ and so $\mu$ is a homeomorphism.
 
-We have just show that given only the ring of functions on a compact Hausdorff space $X$ we can reconstruct the underlying space by just looking at the \textit{maximal specttrum} of the ring.
+We have just show that given only the ring of functions on a compact Hausdorff space $X$ we can reconstruct the underlying space by just looking at the \textit{maximal spectrum} of the ring.
 
 
 \section{Affine Algebraic Varieties}
@@ -296,7 +295,7 @@ By a $k$-algebra we mean a vector space over $k$ with a bilinear product. That i
     $$A \times A \rightarrow A.$$
 
 
-    For each $x\in X$ the ideal $\mathfrak{m}_x$ consiting of $f\in P(X)$ such that $f(x) = 0$ is a maximal ideal. Let $\hat{X} = \Max(P(X))$. We can to show that the mapping $\mu: X \rightarrow \hat{X}$ given by $x\mapsto \mathfrak{m}_x$ is a bijection.
+    For each $x\in X$ the ideal $\mathfrak{m}_x$ consisting of $f\in P(X)$ such that $f(x) = 0$ is a maximal ideal. Let $\hat{X} = \Max(P(X))$. We can to show that the mapping $\mu: X \rightarrow \hat{X}$ given by $x\mapsto \mathfrak{m}_x$ is a bijection.
 
     So far we have seen that the \textit{affine algebraic variety}, $X$ has the \textit{Zariski Topology} and that we can define a ring called the \textit{coordinate ring} $P(X)$ on the variety so that the maximal spectrum of the ring is in bijection with the variety itself. 
 
@@ -308,7 +307,7 @@ By a $k$-algebra we mean a vector space over $k$ with a bilinear product. That i
 
     Let $X,Y$ be affine algebraic varieties in $k^n$ and $k^m$ respectively. A mapping $\phi: X \rightarrow Y$ is a \textit{regular} mapping if $\phi$ is a restriction of a polynomial mapping from $k^n$ to $k^m$.
 
-    If $\eta$ is a polynomial function on $Y$, then $\eta \circ \phi$ is a polynomial function on $X$. So we have a $k$-algebra homomorphim $P(Y) \rightarrow P(X)$ given by $\eta \mapsto \eta \circ \phi$.
+    If $\eta$ is a polynomial function on $Y$, then $\eta \circ \phi$ is a polynomial function on $X$. So we have a $k$-algebra homomorphism $P(Y) \rightarrow P(X)$ given by $\eta \mapsto \eta \circ \phi$.
 
 \chapter{Tensor Product and Direct Limits}
 
@@ -326,14 +325,14 @@ By a $k$-algebra we mean a vector space over $k$ with a bilinear product. That i
 We may consider the mapping $\mu: A \times M \rightarrow M$ to be an action of $A$ on $M$.
 
 \begin{defn}
-    A \text{module homomorphism} between two modules $M$ and $N$ is a called an $A$-\textit{linear mapping} or an $A$-module homomorphim $f:M\rightarrow N$, if the following two properties are satisfied
+    A \text{module homomorphism} between two modules $M$ and $N$ is a called an $A$-\textit{linear mapping} or an $A$-module homomorphism $f:M\rightarrow N$, if the following two properties are satisfied
 \begin{enumerate}
     \item $f(x+y) = f(x) + f(y)$
     \item $f(a.x) = a.f(x)$
 \end{enumerate}
 \end{defn}
 
-A module $M'$ is called a \textit{submodule} of $M$ if it is a subgroup that is closed under multiplication by elements of $A$. The quotient $M/M'$ is an A-module as well.
+A module $M'$ is called a \textit{sub-module} of $M$ if it is a subgroup that is closed under multiplication by elements of $A$. The quotient $M/M'$ is an A-module as well.
 
 \begin{defn}
     Given two modules $M$ and $N$, their direct product is given as the module $M\oplus N$ which is the set of all elements $(x,y) \text{ where } x\in M \text{ and } y\in N$ along with the following two operations 
@@ -341,12 +340,12 @@ $$(x_1,y_1) + (x_2,y_2) = (x_1+x_2, y_1+y_2)$$
 $$a(x,y) = (ax, ay).$$
 \end{defn}
 
-Given an arbitary family of $A$-modules, $(M_i)_{i\in I}$ the direct sum of the family is the sum $\bigoplus_{i\in I} M_i$ is the set of all families $(x_i)_{i\in I}$, $x_i\in M_i$ such that all but finitely many $x_i$ are nonzero.
+Given an arbitrary family of $A$-modules, $(M_i)_{i\in I}$ the direct sum of the family is the sum $\bigoplus_{i\in I} M_i$ is the set of all families $(x_i)_{i\in I}$, $x_i\in M_i$ such that all but finitely many $x_i$ are nonzero.
 
 \section{Exact Sequences}
 
 \begin{defn}
-    Given an $A$-module homomorphim $f: M' \rightarrow M$ the cokernel of $f$ is the quotient module $M/f(M')$. This is denoted by $\Coker(f)$.
+    Given an $A$-module homomorphism $f: M' \rightarrow M$ the cokernel of $f$ is the quotient module $M/f(M')$. This is denoted by $\Coker(f)$.
 \end{defn}
 
 
@@ -368,7 +367,7 @@ is said to be \textit{exact} at $M_i$ if, $\Ker(f_{i+1}) = \text{Im}(f_i)$. The 
         \item Let $M \xrightarrow{g} M'' \rightarrow 0$ be an exact sequence. The kernel of $M'' \rightarrow 0$ is the entire module $M''$. Therefore the image of $g$ is $M''$ and so $g$ is surjective.
 
             Conversely, let $g$ be a surjective mapping. Then the$\text{Im}(g)$ is the module $M''$. But it is also the kernel of $M'' \rightarrow 0$. Therefore the sequence is exact.
-        \item Let the sequence be exact. By (1) and (2) $f$ is injective and $g$ is surjective. We also have that $M'' \cong M/\Ker(g)$. Since the sequence is exact $\Ker(g) = \text{Im}(f) = f(M')$. Therefore $M'' \cong M/f(M') = \Coker(f)$. The converse is follows similarily.
+        \item Let the sequence be exact. By (1) and (2) $f$ is injective and $g$ is surjective. We also have that $M'' \cong M/\Ker(g)$. Since the sequence is exact $\Ker(g) = \text{Im}(f) = f(M')$. Therefore $M'' \cong M/f(M') = \Coker(f)$. The converse is follows similarly.
     \end{enumerate}
 \end{proof}
 
@@ -383,10 +382,10 @@ is said to be \textit{exact} at $M_i$ if, $\Ker(f_{i+1}) = \text{Im}(f_i)$. The 
 \end{enumerate}
 \end{defn}
 
-We see that $0 \otimes x = x\otimes 0 = 0$ as $0.(a\otimes x) = 0$. If $x_i$ generates M and $y_i$ generates N then $x_i \otimes y_i$ generates $M\otimes N$. Let $x\in M$ and $y\in N$ if $M' \subseteq M$ and $N'\subseteq N$ are submodules then $x\otimes y \in M\otimes N$ is not the same as $x\otimes y \in M'\otimes N'$. To be specific the tensor product of A-modules is denoted by $M \otimes_A N$ but if the context is clear we can write $M\otimes N$. The following are some useful properties of \textit{tensor product}.
+We see that $0 \otimes x = x\otimes 0 = 0$ as $0.(a\otimes x) = 0$. If $x_i$ generates M and $y_i$ generates N then $x_i \otimes y_i$ generates $M\otimes N$. Let $x\in M$ and $y\in N$ if $M' \subseteq M$ and $N'\subseteq N$ are sub-modules then $x\otimes y \in M\otimes N$ is not the same as $x\otimes y \in M'\otimes N'$. To be specific the tensor product of A-modules is denoted by $M \otimes_A N$ but if the context is clear we can write $M\otimes N$. The following are some useful properties of \textit{tensor product}.
 
 \begin{prop} 
-    Let M,N,P be A-modules. Then there exists unique isomorphisms called the cannonical isomorphisms 
+    Let M,N,P be A-modules. Then there exists unique isomorphisms called the canonical isomorphisms 
     \begin{enumerate}
         \item $M\otimes N \rightarrow N\otimes N$  
         \item $(M\otimes N) \otimes P \rightarrow M\otimes (N\otimes P) \rightarrow M\otimes N\otimes P$
@@ -417,13 +416,13 @@ A ring $A$ is called \textit{absolutely flat} if every $A$-module is flat.
 \section{Tensor Product of Algebras}
 
 \begin{defn}
-    A ring $B$ along with a homomorphim $f: A \rightarrow B$ is called an $A$-algebra if we consider the ring $B$ as an $A$-module by defining the action of $A$ on $B$, that is, the product $ab$, where $a \in A \text{ and } b \in B$, as $f(a)b$.
+    A ring $B$ along with a homomorphism $f: A \rightarrow B$ is called an $A$-algebra if we consider the ring $B$ as an $A$-module by defining the action of $A$ on $B$, that is, the product $ab$, where $a \in A \text{ and } b \in B$, as $f(a)b$.
 \end{defn}
 
 
-Let $B,C$ be two $A$-algebras with associated homomorphims $f:A\rightarrow B$ and $g:A\rightarrow C$. As algebras are themselves modules we take their tensor product $D = B\otimes_A C$. 
+Let $B,C$ be two $A$-algebras with associated homomorphism $f:A\rightarrow B$ and $g:A\rightarrow C$. As algebras are themselves modules we take their tensor product $D = B\otimes_A C$. 
 
-Define the multiplicaton $D\otimes D \rightarrow D$ by the A-bilinear mapping $\mu: D\times D \rightarrow D$ so that,
+Define the multiplication $D\otimes D \rightarrow D$ by the A-bilinear mapping $\mu: D\times D \rightarrow D$ so that,
 $$\mu(b\otimes c, b'\otimes c') = bb' \otimes cc'. $$
 
 
@@ -447,7 +446,7 @@ Hence the tensor product $D = B \otimes_A C$ is a commutative ring with unity $1
 
 The concept of a \textit{direct limit} comes from the Category Theory notion of \textit{colimits}. We put together a collection of modules to make another module which we shall use later.
 
-Let $(M_i)_{i\in I}$ be a family of $A$-modules where the set $I$ has the property that that it is a partially ordered set as well as a \textit{directed set}, by which we mean that for each pair $i,j$ in $I$ there exists $k\in I$ such that $i\leq k$ and $j\leq k$. We also have for each pair $i,j$ in $I$ and $i\leq j$ the $A$-homomorphim $\mu_{ij}: M_i \rightarrow M_j$ which satisfies the following two properties
+Let $(M_i)_{i\in I}$ be a family of $A$-modules where the set $I$ has the property that that it is a partially ordered set as well as a \textit{directed set}, by which we mean that for each pair $i,j$ in $I$ there exists $k\in I$ such that $i\leq k$ and $j\leq k$. We also have for each pair $i,j$ in $I$ and $i\leq j$ the $A$-homomorphism $\mu_{ij}: M_i \rightarrow M_j$ which satisfies the following two properties
 \begin{enumerate}
     \item $\mu_{ii}$ is the identity mapping $\forall i\in I$.
     \item $\mu_{ik} = \mu_{jk}\circ \mu_{ij}$ whenever $i\leq j\leq k$.
@@ -466,7 +465,7 @@ There's nothing very sophisticated about the definition of the \textit{direct li
 
 \chapter{Localization}
 
-Given a ring $A$, a subset $S$ of $A$ is said to be \textit{multiplicatively closed} if $1\in S$ and the product of any two elements in $S$ belongs to $S$, i.e., $S$ is \textit{closed} under multiplicaton. 
+Given a ring $A$, a subset $S$ of $A$ is said to be \textit{multiplicatively closed} if $1\in S$ and the product of any two elements in $S$ belongs to $S$, i.e., $S$ is \textit{closed} under multiplication. 
 
 If $S$ is a \textit{multiplicatively closed} subset of $A$ we can form a new ring $\byS A$ from $A$ consisting of all the pairs $(a,s)$ such that $a\in A, s\in S$ with the identification
     $$(a,s) \equiv (b,t) \Leftrightarrow (at - bt)u = 0 \text{ for some } u \in S$$
@@ -505,12 +504,12 @@ Suppose $S = \{f^n\}_{n\geq 0}$. $S$ is multiplicatively closed and the ring of 
     Given an open set $U$ on a topological space $X$, the \textit{presheaf of rings}, $F$ on $X$ is defined as the following data
 \begin{enumerate}
     \item To each open set $U$, a ring $F(U)$ is associated. The elements $f \in F(U)$ are called the \text{sections} of $F$ over $U$. The ring $F(X)$ is called a ring of \textit{global section}.  
-    \item Let $U$ and $V$ be two open subsets of $X$ such that $V \subseteq U$. The ring homomorphim $\text{res}_{V,U}: F(U) \rightarrow F(V)$ associated with this mapping is called the \textit{restriction homomorphim}. If $f \in F(U)$ is a section, then $\text{res}_{V,U}(f)$ is called the restriction of $f$ and is denoted by $f|_{V}$.
+    \item Let $U$ and $V$ be two open subsets of $X$ such that $V \subseteq U$. The ring homomorphism $\text{res}_{V,U}: F(U) \rightarrow F(V)$ associated with this mapping is called the \textit{restriction homomorphism}. If $f \in F(U)$ is a section, then $\text{res}_{V,U}(f)$ is called the restriction of $f$ and is denoted by $f|_{V}$.
     \end{enumerate}
 
-Additionally, the restriction homomorphim must sastisfy the following conditions
+Additionally, the restriction homomorphism must satisfy the following conditions
 \begin{enumerate}
-    \item For each open set $U$ of $X$, the restriction homomorphim $\text{res}_{U,U}: F(U) \rightarrow F(U)$ is the identity homomorphim.
+    \item For each open set $U$ of $X$, the restriction homomorphism $\text{res}_{U,U}: F(U) \rightarrow F(U)$ is the identity homomorphism.
     \item If we have $W \subseteq V \subseteq U$ for three open sets, then $\text{res}_{W,V} \circ \text{res}_{V,U} = \text{res}_{W,U}$. That is we have the commutative diagram
 
 \end{enumerate}
@@ -518,7 +517,7 @@ Additionally, the restriction homomorphim must sastisfy the following conditions
 
 Suppose we arrange all the open subsets of $X$ in to a set. If we think of each inclusion $V \subseteq U$ of open sets in our set as a function or technically speaking a \textit{morphism} $V \rightarrow U$ then to our original collection of open subsets we may associate function. Such a collection is called a \textit{Category}. In this example since the elements of the sets are open sets we say that this category is the category of open set with morphisms given by inclusion.
 
-On the other hand consider another collection of all rings with morphisms $A \rightarrow B$ between two rings that are just ring homomorphims. This is another \textit{category}, the category of rings, while preserving morphisms. That is $F$ takes the mapping $V \rightarrow U$ in the category of open sets given by inclusion to the mapping $F(U) \rightarrow F(V)$ given by the \textit{restriction homomorphim} in the category of rings.
+On the other hand consider another collection of all rings with morphisms $A \rightarrow B$ between two rings that are just ring homomorphisms. This is another \textit{category}, the category of rings, while preserving morphisms. That is $F$ takes the mapping $V \rightarrow U$ in the category of open sets given by inclusion to the mapping $F(U) \rightarrow F(V)$ given by the \textit{restriction homomorphism} in the category of rings.
 
 In the language of \textit{Category Theory}, the \textit{presheaf} $F$ is a \textit{functor}, that is a function that takes each element $U$ in the category of open sets to an element $F(U)$ in the category of rings.
 
@@ -531,7 +530,7 @@ In the language of \textit{Category Theory}, the \textit{presheaf} $F$ is a \tex
 \begin{defn}
     Given a sheaf of rings $F(U)$, the stalk of the sheaf at a point $x \in U$ is defined as the direct limit
     $$F_x = \varinjlim_{U \ni x} F(U)$$
-    Where the direct limit is taken over the direct system consiting of those open sets which contain $x$. 
+    Where the direct limit is taken over the direct system consisting of those open sets which contain $x$. 
 \end{defn}
 
 
@@ -539,12 +538,12 @@ In the language of \textit{Category Theory}, the \textit{presheaf} $F$ is a \tex
 
 Now we shall construct an example of a \textit{sheaf of rings} to illuminate the abstract definition of a \textit{sheaf} we have seen so far.
 
-Suppose we have the ring homomorphim $\phi: A \rightarrow \byS A$ given by $a \mapsto a/1$. If we take the associated mapping of the prime spectrum
+Suppose we have the ring homomorphism $\phi: A \rightarrow \byS A$ given by $a \mapsto a/1$. If we take the associated mapping of the prime spectrum
     $$\phi^* : \Spec(\byS A) \rightarrow \Spec(A)$$
     we can show that this mapping is a homeomorphism of $\Spec(\byS A)$ onto it's image in $X = \Spec(A)$. 
 
 \begin{prop}
-Let $A$ be a ring and $f: A \rightarrow \byS A$ be the cannonical homomorphim $a \mapsto a/1$. Under this homomorphim the prime ideals $\mathfrak{p}$ of $A$ which do not meet $S$ in $A$ are in one-to-one correspondence with the prime ideals $\byS \mathfrak{p}$ of $\byS A$. That is $\mathfrak{p} \leftrightarrow \byS \mathfrak{p}$.
+Let $A$ be a ring and $f: A \rightarrow \byS A$ be the canonical homomorphism $a \mapsto a/1$. Under this homomorphism the prime ideals $\mathfrak{p}$ of $A$ which do not meet $S$ in $A$ are in one-to-one correspondence with the prime ideals $\byS \mathfrak{p}$ of $\byS A$. That is $\mathfrak{p} \leftrightarrow \byS \mathfrak{p}$.
 \end{prop}
 
 
@@ -555,7 +554,7 @@ If $f \in A$ and $S = \{f^n\}_{n\geq1}$ then the image of $\Spec(\byS A) = \Spec
 $\byS A = A_f$ are in 1-1 correspondence with the prime ideal of $\mathfrak{p}$ in the ring $A$ that does not meet $S = \{f^n\}_{n \geq 1}$. Which means that $f \not \in \mathfrak{p}$. But that means $\mathfrak{p}$ belongs in the subset $X_f$ of $X$. So $\Spec(A_f) \subseteq X_f$. Conversely, if $\mathfrak{p} \in X_f$ then that prime ideal does not contain $f$, so does not meet $S = \{f^n\}_{n \geq 1}$. Therefore we have a unique prime ideal $\byS \mathfrak{p} \in A_f$. Therefore we have the reverse inclusion and the proposition is proved.
 \end{proof}
 
-So we are justified in introducting the new notation, given $U = X_f$, 
+So we are justified in introducing the new notation, given $U = X_f$, 
     $$A(U) = A_f$$ 
     The ring $A(U)$ is only dependent on $U$ as a subset of $X$ and not on $f$.
 
@@ -565,7 +564,7 @@ So we are justified in introducting the new notation, given $U = X_f$,
     Then there exists a $u \in A$ such that $g^n = uf$ for some integer $n > 0$. 
 \end{prop}
 \begin{proof}
-    Since $U' \subseteq U$ we have that $X_g \subseteq X_f$. As $X_g = X - V(g)$ and $X_f = X - V(f)$ we have $V(f) \subseteq V(g)$. Which means that every prime ideal $\mathfrak{p}$ in $A$ that contains $f$ also constans $g$.
+    Since $U' \subseteq U$ we have that $X_g \subseteq X_f$. As $X_g = X - V(g)$ and $X_f = X - V(f)$ we have $V(f) \subseteq V(g)$. Which means that every prime ideal $\mathfrak{p}$ in $A$ that contains $f$ also constant $g$.
 
     The radical of an ideal $\mathfrak{a}$ is the intersection of all prime ideals which contain $\mathfrak{a}$. Since $(f) \subseteq \mathfrak{p}$ is an ideal of $A$, 
     $$r((f)) = \bigcap_{f \in \mathfrak{p}} \mathfrak{p}, \text{ where } \mathfrak{p} \text{ prime in } A$$
@@ -575,10 +574,10 @@ So we are justified in introducting the new notation, given $U = X_f$,
 
 
 \begin{defn}
-    We define the homomorphim $\rho: A(U) \rightarrow A(U')$ as the mapping $a/f^m \mapsto au^m/g^{nm}$. This homomorphim is called the \textit{restriction} homomorphim.
+    We define the homomorphism $\rho: A(U) \rightarrow A(U')$ as the mapping $a/f^m \mapsto au^m/g^{nm}$. This homomorphism is called the \textit{restriction} homomorphism.
 \end{defn}
 
-We shall show that the homomorphim $\rho$ satisfies the two condiions
+We shall show that the homomorphism $\rho$ satisfies the two conditions
     \begin{enumerate}
         \item If $U = U'$ then $\rho$ is the identity map.
         \item If $U \supseteq U' \supseteq U''$ then the following diagram commutes 
@@ -593,9 +592,9 @@ We shall show that the homomorphim $\rho$ satisfies the two condiions
 \begin{proof}
     \begin{enumerate}
         \item It follows easily from the definition that $\rho$ is an identity mapping. 
-        \item We have $U'' \subseteq U$ hence there exists a $u'' \in A$ and and integer $n>0$ such that $h^n = u''f, n>0$.
+        \item We have $U'' \subseteq U$ hence there exists a $u'' \in A$ and integer $n>0$ such that $h^n = u''f, n>0$.
 
-            Similarily, as $U'' \subseteq U'$ there exists $u \in A$ and an integer $l > 0$ such that $h^l = ug$. 
+            Similarly, as $U'' \subseteq U'$ there exists $u \in A$ and an integer $l > 0$ such that $h^l = ug$. 
 
             As $U' \subseteq U$ there exists $u' \in A$ and an integer $m > 0$ such that $g^m = u'f$.
 
@@ -619,16 +618,16 @@ We shall show that the homomorphim $\rho$ satisfies the two condiions
     \end{enumerate}
 \end{proof}
 
-So we see that the collection of open sets $U = X_f$ on $\Spec(A)$ forms a \textit{presheaf} by the \textit{restriction homomorphim} $\rho$, the associated ring to $U$ is of course $A(U) = A_f$.
+So we see that the collection of open sets $U = X_f$ on $\Spec(A)$ forms a \textit{presheaf} by the \textit{restriction homomorphism} $\rho$, the associated ring to $U$ is of course $A(U) = A_f$.
 
 The \textit{stalk} of the presheaf is defined as the direct limit of $A(U)$. In this case the stalk is
     $$\varinjlim_{U \ni x} A(U) \cong A_\mfk{p}.$$
 
 \begin{proof}
     If $x \in U$ then $\mathfrak{p}_x \in X_f$ which means that $f \not \in \mathfrak{p}_x$. This means that the direct limit is taken over all rings $A_f = A(U)$ such that $f \not \in \mathfrak{p}_x$.
-    The divisor $D$ is generated by $x_i - \mu_{ij}(x_i), i < j$. In our case $\mu_{ij}$ is in fact the restriction homomorphim. Therefore $D$ is generated by $\frac{a}{f^m} - \rho(\frac{a}{f^m}) = \frac{a}{f^m} - \frac{au^m}{f^{mn}}$. But $g^n = uf$ for some $u \in A$. Hence
+    The divisor $D$ is generated by $x_i - \mu_{ij}(x_i), i < j$. In our case $\mu_{ij}$ is in fact the restriction homomorphism. Therefore $D$ is generated by $\frac{a}{f^m} - \rho(\frac{a}{f^m}) = \frac{a}{f^m} - \frac{au^m}{f^{mn}}$. But $g^n = uf$ for some $u \in A$. Hence
     $$\frac{a}{f^m} - \frac{au^m}{u^m f^m} = 0$$
-Therefore the divisor $D$ is infact $0$. Hence
+Therefore the divisor $D$ is in fact $0$. Hence
     $$\varinjlim_{f \not \in \mathfrak{p}_x} A_f = \bigoplus_{f \not \in \mathfrak{p}_x} A_f$$
 
     Where we consider $A_f$ as $\mathbb{Z}$-modules. 
@@ -652,13 +651,12 @@ Therefore the divisor $D$ is infact $0$. Hence
     For each $i,j \in I$, let the mapping of $s_i \in A(U_i)$ and $s_j \in A(U_j)$ by the restriction mapping into $A(U_i \cap U_j)$ be equal then there exists a unique $s \in A(X)$ whose image in $A(U_i)$ is $s_i$ for all $i \in I$. (See Chapter 3, Ex 24 \cite{atiyah1}). 
 \end{proof}
 
-% Consider including the abstract defintion of a sheaf here as well. Once they've seen an proper example it's much easier to understand the abstract definition. But often if you get over the abstractness of the definition, that sort of definition is much more clearer and simpler than a concrete example. But this comes at the cost of not really understanding how concept behaves in the wild. 
 
 \section{Constructible Topology}
 
-Let $A$ and $B$ be rings with a homomorphim $f: A \rightarrow B$ between them. Associated with this homomorphim is the usual mapping $f^*: \Spec(B) \rightarrow \Spec(A)$ and the subset $f^*(\Spec(B))$ which is the image of $\Spec(B)$ in $X = \Spec(A)$.
+Let $A$ and $B$ be rings with a homomorphism $f: A \rightarrow B$ between them. Associated with this homomorphism is the usual mapping $f^*: \Spec(B) \rightarrow \Spec(A)$ and the subset $f^*(\Spec(B))$ which is the image of $\Spec(B)$ in $X = \Spec(A)$.
 
-We shall now define another topology on $X = \Spec(A)$ by considering all subsets $f^*(\Spec(B))$ in $X$ to be closed for each homomorphim $f: A \rightarrow B$. This topology is called the \textit{constructible topology}. (Ex 27).
+We shall now define another topology on $X = \Spec(A)$ by considering all subsets $f^*(\Spec(B))$ in $X$ to be closed for each homomorphism $f: A \rightarrow B$. This topology is called the \textit{constructible topology}. (Ex 27).
 
 For each $f \in A$ the set $X_f$ in $X$ is both open and closed under the \textit{constructible topology}. The \textit{constructible topology} is the smallest topology on $X$ for which all $X_f$ are both open and closed. We can show that the space $X$ is compact, Hausdorff and totally disconnected under the \textit{constructible topology}. (See Chapter 3, Ex 28 \cite{atiyah1})
 
@@ -667,7 +665,7 @@ For each $f \in A$ the set $X_f$ in $X$ is both open and closed under the \texti
 \end{prop}
 
 \begin{proof}
-    Let $(X,\tau_1)$ be the Zariski Topology and let $(X, \tau_2)$ be the constructible topology on $X = \Spec(A)$ and suppose both topologies are identitcal. Under $\tau_2$ the constructible topology is Hausdorff. Hence the Zariski topology on $X$ is Hausdorff as well. By Chapter 3, Ex 11, \cite{atiyah1}, we see that $A/\mathfrak{N}$ is \textit{absolutely flat}.
+    Let $(X,\tau_1)$ be the Zariski Topology and let $(X, \tau_2)$ be the constructible topology on $X = \Spec(A)$ and suppose both topologies are identical. Under $\tau_2$ the constructible topology is Hausdorff. Hence the Zariski topology on $X$ is Hausdorff as well. By Chapter 3, Ex 11, \cite{atiyah1}, we see that $A/\mathfrak{N}$ is \textit{absolutely flat}.
 
     Conversely, let $A/\mathfrak{N}$ be \textit{absolutely flat}. Then under the Zariski Topology $X$ is a Hausdorff space by Chapter 3, Ex 11 \cite{atiyah1}.
 
@@ -682,7 +680,7 @@ For each $f \in A$ the set $X_f$ in $X$ is both open and closed under the \texti
 
 \chapter{The Going-Up Theorem}
 
-Suppose we have a ring $B$ and a subring $A$ such that $A \subseteq B$. Then an element $x \in B$ is called \textit{integral} over the subring $A$ if it is the root of a monic polynomial $p(t) = t^n + a_{n-1}t^{n-1} + \cdots + a_0$ with coefficients in the ring $A$.
+Suppose we have a ring $B$ and a sub-ring $A$ such that $A \subseteq B$. Then an element $x \in B$ is called \textit{integral} over the sub-ring $A$ if it is the root of a monic polynomial $p(t) = t^n + a_{n-1}t^{n-1} + \cdots + a_0$ with coefficients in the ring $A$.
 
 The set of elements in $B$ that are \textit{integral} over $A$ form a subring $C$ of $B$ called the \textit{integral closure} of $A$ in $B$.
 
@@ -704,7 +702,7 @@ The set of elements in $B$ that are \textit{integral} over $A$ form a subring $C
 \end{theorem}
 
 \begin{proof}
-By induction we reduce immediately to the case $m = 1, n = 2$. Let $\bar{A} = A/\mathfrak{p}_1, \bar{B} = B/\mathfrak{q}_1$; then $\bar{A} \subseteq \bar{B}$, and $\bar{B}$ is integral over $\bar{A}$ by \ref{5.6}. Hence, by \ref{5.10}, there exists a prime ideal $\bar{\mathfrak{q}_2}$ of $\bar{B}$ such that $\bar{\mathfrak{q}_2} \cap \bar{A} = \bar{\mathfrak{p}_2}$, the image of $\mathfrak{p}_2$ in $\bar{A}$. Lift back $\bar{\mathfrak{q}_2}$ to $B$ and we have a prime ideal $\mathfrak{q}_2$ with the requird properties. 
+By induction we reduce immediately to the case $m = 1, n = 2$. Let $\bar{A} = A/\mathfrak{p}_1, \bar{B} = B/\mathfrak{q}_1$; then $\bar{A} \subseteq \bar{B}$, and $\bar{B}$ is integral over $\bar{A}$ by \ref{5.6}. Hence, by \ref{5.10}, there exists a prime ideal $\bar{\mathfrak{q}_2}$ of $\bar{B}$ such that $\bar{\mathfrak{q}_2} \cap \bar{A} = \bar{\mathfrak{p}_2}$, the image of $\mathfrak{p}_2$ in $\bar{A}$. Lift back $\bar{\mathfrak{q}_2}$ to $B$ and we have a prime ideal $\mathfrak{q}_2$ with the required properties. 
 \end{proof}
 
 \begin{thebibliography}{9}
